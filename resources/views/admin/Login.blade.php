@@ -39,15 +39,30 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">LOGIN</h1>
                   </div>
-                  <form class="user" method="" action="/dashboard">
+                  <form class="user needs-validation" novalidate="" method="POST" action="{{route('login')}}">
+                    @csrf
+                    @if(session('message'))
+                      <div class="mb-2">
+                        <p class="text-danger"><b>X</b> {{ session('message')}} </p>
+                      </div>
+                    @endif
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address..." autocomplete="off">
+                      <input type="text" class="form-control form-control-user @error('email') is-invalid @enderror" id="email" name="email" placeholder="Enter Email Address..." autocomplete="off">
                       <small class="text-danger pl-3"></small>
-
+                      @error('email')
+                          <div class="invalid-feedback">
+                            {{ $message }}
+                          </div>
+                      @enderror
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
+                      <input type="password" class="form-control form-control-user @error('password') is-invalid @enderror" id="password" name="password" placeholder="Password">
                       <small class="text-danger pl-3"></small>
+                      @error('password')
+                          <div class="invalid-feedback">
+                            {{ $message }}
+                          </div>
+                      @enderror
 
                     </div>
                     <button type="submit" class="btn btn-primary btn-user btn-block">

@@ -28,37 +28,39 @@ Route::get('/', function(){
     return view('guest.welcome');
 });
 
-// Page Admin
-
-Route::get('/dashboard', 'AdminController@dashboard');
-Route::get('/regis', 'AdminController@regis');
-Route::get('/showbuku', 'BukuController@showbuku');
 
 
-// profile
-Route::get('/profile', 'AdminController@profile');
+//LOGIN
+Route::group(['middleware' => 'SudahLoginMiddleware'], function() {
+    Route::get('/petugas','otentikasi\OtentikasiController@index')->name('login');
+    Route::post('login','otentikasi\OtentikasiController@login')->name('login');
+});
 
+// PAGE ADMIN
+Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
+    Route::get('/dashboard', 'AdminController@dashboard');
+    Route::get('/regis', 'AdminController@regis');
+    Route::get('/showbuku', 'BukuController@showbuku');
+    // profile
+    Route::get('/profile', 'AdminController@profile');
+    // buku
+    Route::resource('buku', 'BukuController');
+    // kategori
+    Route::resource('kategori','KategoriController');
+    // ruangan
+    Route::resource('ruangan', 'RuanganController');
+    // laporan
+    Route::get('/laporan', 'AdminController@laporan');
+    // petugas
+    Route::resource('admin', 'AdminController');
+    // transaksi
+    Route::get('/transaksi', 'AdminController@transaksi');
+    Route::get('/edittransaksi', 'AdminController@edittransaksi');
+    Route::get('/createtransaksi', 'AdminController@createtransaksi');
+    //logout
+    Route::get('logout','otentikasi\OtentikasiController@logout')->name('logout');
+});
 
-// buku
-Route::resource('buku', 'BukuController');
-
-// kategori
-Route::resource('kategori','KategoriController');
-
-// ruangan
-Route::resource('ruangan', 'RuanganController');
-
-// laporan
-Route::get('/laporan', 'AdminController@laporan');
-
-// petugas
-Route::resource('admin', 'AdminController');
-
-
-// transaksi
-Route::get('/transaksi', 'AdminController@transaksi');
-Route::get('/edittransaksi', 'AdminController@edittransaksi');
-Route::get('/createtransaksi', 'AdminController@createtransaksi');
 
 
 
