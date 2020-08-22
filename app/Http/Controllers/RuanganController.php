@@ -102,8 +102,9 @@ class RuanganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Ruangan $ruangan)
     {
-        //
+        $ruangan->delete();
+        return redirect()->route('ruangan.index')->with('destroy','Berhasil dihapus!');
     }
 }

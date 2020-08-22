@@ -82,7 +82,7 @@
                     <a href="{{ route('ruangan.edit',['ruangan'=>$row->id_ruangan]) }}" class="btn btn-sm btn-warning">
                       <i class="fas fa-edit"></i>
                     </a><br>
-                    <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="">
+                    <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="{{ route('ruangan.destroy',['ruangan'=>$row->id_ruangan])}} ">
                       <i class="fas fa-trash alt"></i>
                     </button>
                   </td>
@@ -105,5 +105,44 @@
   
 @endsection
 
+@push('modal')
+<div class="modal fade" tabindex="-1" id="modalHapus">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-trash-alt"></i>Hapus
+                </h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah yakin akan dihaspus?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <form action="#" method="post">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-primary">Ya,Hapus!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@endpush
+
+@push('js')
+<script>
+    $(function(){
+        $('.tombol-hapus').click(function(){
+            var url = $(this).attr('data-url');
+            $("#modalHapus form").attr('action',url);
+            $('#modalHapus').modal('show');
+        });
+    });
+</script>
+@endpush 
 
 
