@@ -28,77 +28,27 @@
 			</div>
 		</div>
 		<div class="col-md-7 offset-md-1">
-			<table class="table table-bordered table-hover">
-			  <thead class="bg-info text-light">
-			    <tr>
-			      <th scope="col">No</th>
-			      <th scope="col">Nama buku</th>
-			      <th scope="col">ID buku</th>
-			      <th scope="col">Aksi</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row">1</th>
-			      <td>Matematika Kelas VII</td>
-			      <td>MTK7</td>
-			      <td><a href="/pinjambuku" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">2</th>
-			      <td>Matematika Kelas VIII</td>
-			      <td>MTK8</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">3</th>
-			      <td>Matematika Kelas IX</td>
-			      <td>MTK9</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">4</th>
-			      <td>Matematika Kelas VII</td>
-			      <td>MTK7</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">5</th>
-			      <td>Matematika Kelas VIII</td>
-			      <td>MTK8</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">6</th>
-			      <td>Matematika Kelas IX</td>
-			      <td>MTK9</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">7</th>
-			      <td>Matematika Kelas VII</td>
-			      <td>MTK7</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">8</th>
-			      <td>Matematika Kelas VIII</td>
-			      <td>MTK8</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">9</th>
-			      <td>Matematika Kelas IX</td>
-			      <td>MTK9</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">10</th>
-			      <td>Matematika Kelas IX</td>
-			      <td>MTK9</td>
-			      <td><a href="" class="btn btn-success btn-sm">Pinjam</a></td>
-			    </tr>
-			  </tbody>
+			<table class="table">
+			    <thead>
+			        <th>Buku</th><th></th>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>
+			          <img src="{{url('images/mantappu.jpg')}}" width="100" class="img-thumbnail mr-3" align="left">
+			          <a href="/showbukuguest" class="font-weight-normal">
+			              Matematika
+			          </a><br>
+			          <span>Penerbit  :  <b>Lorem</b></span><br>
+			          <span>Kategori   : <b>Ipsum</b></span><br>
+			          <span>Ruangan    : <b>Blok A1</b></span><br>
+			        </td>
+			        <td>
+			          <a href="/pinjambuku" class="btn btn-sm btn-success">
+			            Pinjam
+			          </a>
+			        </td>
+			      </tr>
 			</table>			
 		</div>
 		<div class="col-md-3 ml-2">

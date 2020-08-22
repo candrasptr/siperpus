@@ -23,6 +23,7 @@ Route::get('/regisuser', 'GuestController@regisuser');
 Route::get('/bukuonline', 'GuestController@bukuonline');
 Route::get('/myprofile', 'GuestController@myprofile');
 Route::get('/about', 'GuestController@about');
+Route::get('/showbukuguest', 'GuestController@showbukuguest');
 Route::get('/', function(){
     return view('guest.welcome');
 });

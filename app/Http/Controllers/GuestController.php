@@ -42,6 +42,10 @@ class GuestController extends Controller
         return view('guest.daftarbukuonline');
     }
 
+    public function showbukuguest(){
+        return view('guest.showbuku');
+    }
+
     
 
 }
