@@ -1,0 +1,440 @@
+/* Header footer home */
+
+#navbar {
+    background-color: transparent;
+    box-shadow: 10px;
+}
+
+#btnnav {
+    background-color: black;
+}
+
+.mainmenubtn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding:5px;
+    margin-top:3px;
+}
+
+#itemnav {
+    cursor: pointer;
+}
+ 
+.mainmenubtn:hover {
+    background-color: transparent;
+    }
+ 
+.dropdown {
+    position: relative;
+    display: block;
+}
+.dropdown-child {
+    display: none;
+    background-color: transparent;
+    min-width: 200px;
+}
+.dropdown-child a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    width: 5px;
+    display: flex;
+    align-items: right;
+}
+
+.dropdown-child a:hover {
+    color: #17A2B7;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logofooter {
+    width: 50px;
+}
+
+.textnav {
+    color: #4ECDC4;
+    position: relative;
+}
+
+#persegi {
+    width: 100%;
+    height: 100%;
+    background-color: #4ECDC4;
+    padding-bottom: 10px;
+}
+
+#textbanner {
+    color: #ffffff;
+}
+
+#textbanner:hover {
+    color: #FFE66D;
+}
+
+#cari {
+    margin-top: 10px;
+    background-color: #3DBCB3;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-width: 2px;
+    border-color: #ffffff;
+}
+
+#cari:hover {
+    box-shadow: none;
+}
+
+#btncari {
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-width: 2px;
+    border-color: #ffffff;
+    height: 38px;
+    width: 60px;
+}
+
+#btncari:hover {
+    box-shadow: none;
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+}
+
+#icari {
+    color: #4ECDC4;
+}
+
+#banner {
+    width: 100%;
+    background-color: #FFE66D;
+    position: fixed;
+    background-position: -85px 100px;
+}
+
+#hiji {
+    width: 100%;
+    height: 200px;
+    background-color: #FFE66D;
+}
+
+#dua {
+    width: 100%;
+    height: 200px;
+    background-color: #4ECDC4;
+}
+
+#tilu {
+    width: 100%;
+    height: 200px;
+    background-color: #FF6B6B;
+}
+
+#bt {
+    width: 200px;
+    height: 200px;
+    background-color: #FFE66D;
+}
+
+#sp {
+    font-family: monospace;
+}
+
+@font-face {
+     font-family: "Mblack";
+     src: url('../font/MontserratBlack.ttf')
+}
+
+@font-face {
+     font-family: "Mblackita";
+     src: url('../font/MontserratBlackItalic.ttf')
+}
+
+@font-face {
+     font-family: "Mbold";
+     src: url('../font/MontserratBold.ttf')
+}
+
+@font-face {
+     font-family: "Mboldita";
+     src: url('../font/MontserratBoldItalic.ttf')
+}
+
+@font-face {
+     font-family: "Mregular";
+     src: url('../font/MontserratRegular.ttf')
+}
+
+@font-face {
+     font-family: "MSemibold";
+     src: url('../font/MontserratSemiBold.ttf')
+}
+
+@font-face {
+     font-family: "MSemiboldita";
+     src: url('../font/MontserratSemiBoldItalic.ttf')
+}
+
+@font-face {
+     font-family: "Mitalic";
+     src: url('../font/MontserratItalic.ttf')
+}
+
+@font-face {
+     font-family: "Mmedium";
+     src: url('../font/MontserratMedium.ttf')
+}
+
+@font-face {
+     font-family: "Mmediumita";
+     src: url('../font/MontserratMediumItalic.ttf')
+}
+
+#me {
+    font-family: "Mmedium"
+}
+
+#re {
+    font-family: "Mregular";
+}
+
+#bo {
+    font-family: "Mbold";
+}
+
+#sb {
+    font-family: "MSemibold";
+}
+
+#alamat {
+    font-family: "MSemibold";
+    font-size: 12px;
+    color: #888888;
+}
+
+#footertext {
+    font-family: "Mmedium";
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.garis {
+    width: 65%;
+    margin-right: 50%;
+    border-width: 2px;
+    border-color: #17A2B7;
+}
+
+#hr {
+    width: 50px;
+    border-width: 2px;
+    border-color: #17A2B7;
+}
+
+#tp {
+    font-family: "Mbold";
+    color: #4ECDC4;
+}
+
+#btnselengkapnya {
+    border-radius: 50px;
+}
+
+#btnsemua{
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+
+#images1 {
+    background-color: #FFE66D;
+    width: 100%;
+    height: 300px;
+}
+
+#warga {
+    width: 100%;
+    /*height: 200px;
+*/    background-color: #FF6B6B;
+}
+
+#guru {
+    margin-left: 150px;
+}
+
+.jb {
+
+}
+
+@media screen and (max-width:680px){
+
+    #maincontent{
+        width: auto;
+        float: none;
+    }
+    #sidebar{
+        width: auto;
+        float: none;
+    }
+}
+
+#ber {
+    background-color: #eeeeef;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#bercd {
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    border-color: transparent;
+    background-color: ;
+}
+
+#imgberita {
+    border-radius: 5px;
+}
+
+#images2 {
+    width: 100%;
+    height: 150px;
+    background-color: #eeeeee;
+}
+
+.footer {
+    width: 100%;
+    margin-right: 50%;
+    background-color: #17A2B7;
+    height: 1px;
+}
+
+#footerberita {
+    position: relative;
+}
+
+#buttonfooter {
+    opacity: 0.5;
+}
+
+#copy{
+    font-family: "Mregular";
+    color: #999999;
+    font-size: 13px;
+}
+
+#iconcopy {
+    color: #999999;
+}
+
+#footer {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    background-color: black;
+    margin-top: 50px;
+}
+
+#footerdua {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding-bottom: 10px;
+}
+
+#img {
+    background-color: #ffffff;
+}
+
+/* end header footer home */
+
+
+/* profil */
+
+#paragraf {
+    text-align: justify;
+}
+
+#kiritext {
+    font-family: "MSemibold";
+    text-align: left;
+}
+
+#kanantext {
+    font-family: "Mregular";
+    text-align: right;
+}
+
+.hrprofil {
+    width: 80%;
+    margin-right: 50%;
+    background-color: #17A2B7;
+    height: 1px;
+}
+
+#headberita {
+    font-size: 20px;
+    font-family: "MSemibold";
+}
+
+#imgberita {
+    width: 100%;
+}
+
+/* daftar buku */
+#caribuku {
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-width: 1px;
+    border-color: #dddddd;
+}
+
+#caribuku:hover {
+    box-shadow: none;
+}
+
+#btncaribuku {
+    margin-top: 10px;
+    background-color: #eeeeee;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 1px;
+    border-color: #dddddd;
+    height: 38px;
+    width: 60px;
+}
+
+#btncaribuku:hover {
+    box-shadow: none;
+    background-color: #eeeeee;
+    border-color: #17A2B7;
+}
+
+#icaribuku {
+    color: #17A2B7;
+}
+
+/* Loginuser */
+
+/*body {
+    background-image: url('../images/mantappu.jpg');
+}*/
+
+#background {
+    background-color: #FF6B6B;
+    width: 100px;
+    height: 100px;
+}
+

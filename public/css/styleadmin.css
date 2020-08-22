@@ -1,0 +1,181 @@
+*{
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: 'Montserrat';
+
+}
+
+body {
+	display: flex;
+	height: 100vh;
+}
+
+nav {
+	position: fixed;
+	width: 320px;
+	height: 100%;
+	left: -320px;
+	overflow: hidden;
+	background: #ffffff;
+	box-shadow: inherit;
+	transition: .4s;
+	z-index: 5;
+}
+
+nav .brand {
+	position: absolute;
+	color: #2B4C8C;
+	font-size: 28px;
+	font-weight: 600;
+	margin: 32px 40px;
+}
+
+nav label {
+	position: absolute;
+	right: 50px; top: 35px;
+	padding: 5px 8px;
+	color: #2B4C8C;
+	font-size: 16px;
+	border: 2px solid;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .6s;
+}
+
+nav label:hover {
+	background-color: #2B4C8C;
+	color: #fff;
+}
+
+nav ul {
+	position: absolute;
+	top: 100px;
+}
+
+nav ul li {
+	padding: 20px 35px;
+	color: #2B4C8C;
+	width: 320px;
+	margin-left: -50px;
+	opacity: 0;
+	cursor: pointer;
+	transition: .4s;
+}
+
+nav ul li:hover { animation: hover .6s;  }
+
+@keyframe hover {
+	50% { transform: translateX(20px) scale(1.1);  }
+}
+
+nav ul li a {
+	position: absolute;
+	font-size: 15px;
+	font-weight: 500;
+	left: 80px;
+}
+
+label span {
+	position: absolute;
+	color: #2B4C8C;
+	border: 2px;
+	width: 40px; height: 40px;
+	top: 20px; left: 20px;
+	border-radius: 10%;
+	padding: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: .6s;
+}
+
+label span:hover {
+	color: #fff;
+	background: #2B4C8C;
+}
+
+input {
+	display: none;
+}
+
+input:checked ~ label span {
+	opacity: 0;
+	pointer-events: none;
+}
+
+input:checked ~ nav { left: 0 }
+
+input:checked ~ nav ul li {
+	margin-left: 0;
+	opacity: 1;
+}
+
+@font-face {
+     font-family: "Mblack";
+     src: url('../font/MontserratBlack.ttf')
+}
+
+@font-face {
+     font-family: "Mblackita";
+     src: url('../font/MontserratBlackItalic.ttf')
+}
+
+@font-face {
+     font-family: "Mbold";
+     src: url('../font/MontserratBold.ttf')
+}
+
+@font-face {
+     font-family: "Mboldita";
+     src: url('../font/MontserratBoldItalic.ttf')
+}
+
+@font-face {
+     font-family: "Mregular";
+     src: url('../font/MontserratRegular.ttf')
+}
+
+@font-face {
+     font-family: "MSemibold";
+     src: url('../font/MontserratSemiBold.ttf')
+}
+
+@font-face {
+     font-family: "MSemiboldita";
+     src: url('../font/MontserratSemiBoldItalic.ttf')
+}
+
+@font-face {
+     font-family: "Mitalic";
+     src: url('../font/MontserratItalic.ttf')
+}
+
+@font-face {
+     font-family: "Mmedium";
+     src: url('../font/MontserratMedium.ttf')
+}
+
+@font-face {
+     font-family: "Mmediumita";
+     src: url('../font/MontserratMediumItalic.ttf')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
