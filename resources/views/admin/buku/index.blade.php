@@ -69,7 +69,7 @@
                           <tr>
                             <td>
                               <img src="{{url('images/'.$row->file_gambar_buku)}}" width="100" class="img-thumbnail mr-3" align="left">
-                              <a href="/showbuku" class="font-weight-normal">
+                              <a href="{{route('buku.show',['buku'=>$row->id_buku])}}" class="font-weight-normal">
                                   {{ $row->judul_buku }}
                               </a><br>
                               <span>Penerbit  :  <b>{{ $row->penerbit }}</b></span><br>
