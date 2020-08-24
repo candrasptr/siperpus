@@ -53,15 +53,16 @@ Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
     Route::get('/laporan', 'AdminController@laporan');
     // petugas
     Route::resource('admin', 'AdminController');
+    Route::get('autocomplete', 'AdminController@autocomplete')->name('autocomplete');
+    route::get('/inputdata','AdminController@inputdata');
     // transaksi
-    Route::get('/transaksi', 'AdminController@transaksi');
+    Route::resource('transaksi','TransaksiController');
+    route::get('inputtransaksi','TransaksiController@inputtransaksi')->name('inputtransaksi');
     Route::get('/edittransaksi', 'AdminController@edittransaksi');
     Route::get('/createtransaksi', 'AdminController@createtransaksi');
     //logout
     Route::get('logout','otentikasi\OtentikasiController@logout')->name('logout');
 
-    // manajemen
-    Route::get('/manajemen', 'AdminController@manajemen');
 });
 
 

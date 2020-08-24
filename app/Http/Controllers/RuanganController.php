@@ -107,4 +107,12 @@ class RuanganController extends Controller
         $ruangan->delete();
         return redirect()->route('ruangan.index')->with('destroy','Berhasil dihapus!');
     }
+
+    public function autocomplete(Request $request)
+    {
+        $data = Buku::where('judul_buku')
+                    ->where("judul_buku","like","%{$request->terms}%")
+                    ->get();
+        return response()->json($data);
+    }
 }

@@ -12,14 +12,15 @@
   <title>Dashboard</title>
 
   <!-- Custom fonts for this template-->
-  <link href="{{ url('icon/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ url('css/dropdownsearch.css')}}" type="text/css">
+  <link href="{{ url('icon/css/all.min.css')}}" rel="stylesheet" type="text/css"type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Custom styles for this template-->
   <link href="{{ url('css/sb-admin-2.min.css')}}" rel="stylesheet">
+  
 
 </head>
 
@@ -94,16 +95,16 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="/manajemen">
+        <a class="nav-link" href="{{route('inputtransaksi')}}">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Manajemen</span></a>
+          <span>Petugas</span></a>
       </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="{{route('admin.index')}}">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Petugas</span></a>
+          <span>Manajemen Petugas</span></a>
       </li>
 
 
@@ -191,6 +192,7 @@
 @yield('konten')
 
 
+
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -225,25 +227,13 @@
     </div>
   </div>
 
+  <!-- Scripts -->
 
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="{{ url('vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{ url('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="{{ url('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="{{ url('js/sb-admin-2.min.js')}}"></script>
-
-  <!-- Page level plugins -->
-  <script src="{{ url('vendor/chart.js/Chart.min.js')}}"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="{{ url('js/demo/chart-area-demo.js')}}"></script>
-  <script src="{{ url('js/demo/chart-pie-demo.js')}}"></script>
-  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <script>
+    $('.select2').select2();
+  </script>
   @stack('modal')
     <script src="{{url('js/jquery.slim.min.js')}}"></script>
     <script src="{{url('js/popper.min.js')}}"></script>

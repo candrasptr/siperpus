@@ -5,7 +5,7 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Kategori</h1>
+  <h1 class="h3 mb-2 text-gray-800">Petugas</h1>
 
           @if (session('store'))
           <div class="alert alert-success alert-dismissible fade show">
@@ -33,65 +33,58 @@
               <strong>Succes!</strong>{{ session('destroy')}}.
           </div>
           @endif
-
+          
   <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Data kategori</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Data Petugas</h6>
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <div class="container-fluid">
             <div class="row">
             <div class="col-md-6">
-              <a href="{{route('kategori.create')}}" class="btn btn-primary">Create</a>
+              <a href="{{route('admin.create')}}" class="btn btn-primary">Create</a>
             </div>
 
-            <div class="col-md-4 ">
+            <div class="col-md-4 offset-md-2">
               <form action="?" method="GET">
                   <div class="input-group mb-3">
-                      <input name="keyword" id="carikategori" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2" value="{{ Request()->keyword }}">
+                      <input name="keyword" id="cariAdmin" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2" value="{{ Request()->keyword }}">
                       <div class="input-group-append">
-                        <button id="btncarikategori" class="btn btn-outline-secondary bg-primary" type="submit" id="button-addon2"><i class="fas fa-search text-light"></i></button>
+                        <button id="btncariAdmin" class="btn btn-outline-secondary bg-primary" type="submit" id="button-addon2"><i class="fas fa-search text-light"></i></button>
                       </div>
                   </div>
               </form>
             </div>
 
             <div class="col-md-12 mt-3">
-            <table class="table">
+            <table class="table" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Nama kategori</th>
-                  <th>Deksripsi</th>
+                  <th>Nama admin</th>
+                  <th>email</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
+              
               @foreach($data as $row)
                 <tr>
-                  <td>{{$row->nama_kategori}}</td>
-                  <td style=
-                      "max-width: 800px;
-                      text-overflow: ellipsis;
-                      overflow: hidden;
-                      white-space: nowrap;"
-                    >{{$row->deskripsi}}</td>
-                    <td>
-                    <a href="{{ route('kategori.edit',['kategori'=>$row->id_kategori]) }}" class="btn btn-sm btn-warning">
-                      <i class="fas fa-edit"></i>
-                    </a><br>
-                    <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="{{ route('kategori.destroy',['kategori'=>$row->id_kategori])}}">
+                  <td>{{$row->nama_admin }}</td>
+                  <td>{{$row->email}}</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="{{ route('admin.destroy',['admin'=>$row->id_admin])}}">
                       <i class="fas fa-trash alt"></i>
                     </button>
-                    </td>
+                  </td>
                 </tr>
-              @endforeach
+                @endforeach
+
               </tbody>
             </table>
           </div>
         </div>
-        {!! $data->links() !!}
       </div>
     </div>
   </div>
@@ -143,5 +136,6 @@
     });
 </script>
 @endpush      
+
 
 

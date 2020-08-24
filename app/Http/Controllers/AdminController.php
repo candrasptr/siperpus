@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Admin;
+use App\Buku;
 
 class AdminController extends Controller
 {
@@ -19,7 +20,11 @@ class AdminController extends Controller
                 ->where('tbl_admin.nama_admin','like',"%{$request->keyword}%")
                 ->paginate(10);
 
-        return view('admin.petugas.index',['data'=>$data]);
+        return view('admin.manajemenpetugas.index',['data'=>$data]);
+    }
+
+    public function inputdata(){
+        return view('admin.petugas.index');
     }
 
     /**
@@ -29,7 +34,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.petugas.create');
+        return view('admin.manajemenpetugas.create');
     }
 
     /**
@@ -74,7 +79,7 @@ class AdminController extends Controller
      */
     public function edit(Admin $admin)
     {
-        return view('admin.petugas.edit',['row'=>$admin]);
+        return view('admin.manajemenpetugas.edit',['row'=>$admin]);
     }
 
     /**
@@ -113,6 +118,16 @@ class AdminController extends Controller
         $admin->delete();
         return redirect()->route('admin.index')->with('destroy','Berhasil dihapus!');
     }
+
+    public function autocomplete(Request $request)
+    {
+          $search = $request->get('term');
+     
+          $result = Buku::where('judul_buku', 'LIKE', '%'. $search. '%')->get();
+
+          return response()->json($result);
+           
+    } 
 
         // admin
         public function admin(){
@@ -196,8 +211,4 @@ class AdminController extends Controller
             return view('admin/transaksi.create');
         }
 
-        // manajemen
-        public function manajemen(){
-            return view('admin/manajemen.index');
-        }
 }
