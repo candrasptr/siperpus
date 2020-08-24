@@ -5,7 +5,7 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Transaksi</h1>
+  <h1 class="h3 mb-2 text-gray-800">Petugas</h1>
   <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -16,6 +16,7 @@
             <div class="container-fluid">
             <div class="row">
             <div class="col-md-6">
+              <a href="/createtransaksi" class="btn btn-primary">Create</a>
             </div>
             <div class="col-md-4 offset-md-2">
               <div class="input-group mb-3">
@@ -30,34 +31,18 @@
               <thead>
                 <tr>
                   <th>Id Transaksi</th>
-                  <th>Nama</th>
-                  <th>Kelas</th>
-                  <th>Nohp</th>
-                  <th>Alamat</th>
-                  <th>Id buku</th>
-                  <th>Judul buku</th>
-                  <th>Jumlah pinjam</th>
-                  <th>Waktu peminjaman</th>
-                  <th>Waktu kembali</th>
-                  <th>Status</th>
+                  <th>Nama admin</th>
+                  <th>email</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Tiger Nixon</td>
+                  <td>1</td>
                   <td>System Architect</td>
                   <td>Edinburgh</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
                   <td>
-                    <a href="/edittransaksi" class="btn btn-sm btn-warning">
+                    <a href="" class="btn btn-sm btn-warning">
                       <i class="fas fa-edit"></i>
                     </a><br>
                     <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="">

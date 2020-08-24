@@ -94,6 +94,13 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
+        <a class="nav-link" href="/manajemen">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Manajemen</span></a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
         <a class="nav-link" href="{{route('admin.index')}}">
           <i class="fas fa-fw fa-folder"></i>
           <span>Petugas</span></a>

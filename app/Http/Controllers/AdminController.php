@@ -195,4 +195,9 @@ class AdminController extends Controller
         public function createtransaksi(){
             return view('admin/transaksi.create');
         }
+
+        // manajemen
+        public function manajemen(){
+            return view('admin/manajemen.index');
+        }
 }

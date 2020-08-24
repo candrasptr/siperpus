@@ -92,7 +92,6 @@
                   <input type="text" name="jumlah" class="form-control form-control-md border bg-light" id="colFormLabelSm" disabled value="100">
                 </div>
               </div>
-              <a href="?page=home" class="btn btn-success">Pinjam</a>
               <a href="?page=home" class="btn btn-danger ml-3">Kembali</a> 
         </div>
       </div>

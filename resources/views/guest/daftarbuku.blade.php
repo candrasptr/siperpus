@@ -44,8 +44,8 @@
 			          <span>Ruangan    : <b>Blok A1</b></span><br>
 			        </td>
 			        <td>
-			          <a href="/pinjambuku" class="btn btn-sm btn-success">
-			            Pinjam
+			          <a href="/showbukuguest" class="btn btn-sm btn-info">
+			            Selengkapnya
 			          </a>
 			        </td>
 			      </tr>
