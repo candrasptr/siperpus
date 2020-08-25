@@ -207,8 +207,8 @@ class AdminController extends Controller
             return view('admin/transaksi.edit');
         }
     
-        public function createtransaksi(){
-            return view('admin/transaksi.create');
+        public function showtran(){
+            return view('admin/transaksi.show');
         }
 
 }

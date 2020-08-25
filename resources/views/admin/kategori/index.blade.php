@@ -44,10 +44,10 @@
             <div class="container-fluid">
             <div class="row">
             <div class="col-md-6">
-              <a href="{{route('kategori.create')}}" class="btn btn-primary">Create</a>
+              <a href="{{route('kategori.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Kategori</a>
             </div>
 
-            <div class="col-md-4 ">
+            <div class="col-md-4 offset-md-2">
               <form action="?" method="GET">
                   <div class="input-group mb-3">
                       <input name="keyword" id="carikategori" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2" value="{{ Request()->keyword }}">

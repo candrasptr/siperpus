@@ -59,7 +59,7 @@ Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
     Route::resource('transaksi','TransaksiController');
     route::get('inputtransaksi','TransaksiController@inputtransaksi')->name('inputtransaksi');
     Route::get('/edittransaksi', 'AdminController@edittransaksi');
-    Route::get('/createtransaksi', 'AdminController@createtransaksi');
+    Route::get('/showtran', 'AdminController@showtran');
     //logout
     Route::get('logout','otentikasi\OtentikasiController@logout')->name('logout');
 

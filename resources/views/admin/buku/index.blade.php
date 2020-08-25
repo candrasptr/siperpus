@@ -45,7 +45,7 @@
                     <div class="container-fluid">
                     <div class="row">
                     <div class="col-md-6">
-                      <a href="{{route('buku.create')}}" class="btn btn-primary">Create</a>
+                      <a href="{{route('buku.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah buku</a>
                     </div>
                     
                     <div class="col-md-4 offset-md-2">
