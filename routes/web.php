@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Page Guest
-Route::get('/home', 'GuestController@index');
+Route::get('/', 'GuestController@index');
 Route::get('/salam', 'GuestController@salam');
 Route::get('/daftarbuku', 'GuestController@daftarbuku');
 Route::get('/pinjambuku', 'GuestController@pinjambuku');
@@ -24,9 +24,6 @@ Route::get('/bukuonline', 'GuestController@bukuonline');
 Route::get('/myprofile', 'GuestController@myprofile');
 Route::get('/about', 'GuestController@about');
 Route::get('/showbukuguest', 'GuestController@showbukuguest');
-Route::get('/', function(){
-    return view('guest.welcome');
-});
 
 
 

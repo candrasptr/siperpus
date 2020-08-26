@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Buku;
 
 class GuestController extends Controller
 {
     public function index(){
-        return view('guest.home');
+        $data = Buku::paginate(8);
+
+        return view('guest.welcome',['data'=>$data]);
     }
 
     public function salam(){
