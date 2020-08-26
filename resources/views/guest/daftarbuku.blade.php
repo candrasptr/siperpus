@@ -32,16 +32,17 @@
 			    <thead>
 			        <th>Buku</th><th></th>
 			    </thead>
+			    @foreach($data as $row)
 			    <tbody>
 			      <tr>
 			        <td>
-			          <img src="{{url('images/mantappu.jpg')}}" width="100" class="img-thumbnail mr-3" align="left">
+			          <img src="{{url('images/'.$row->filegambarbuku)}}" width="100" class="img-thumbnail mr-3" align="left">
 			          <a href="/showbukuguest" class="font-weight-normal">
-			              Matematika
+			              {{$row->judul_buku}}
 			          </a><br>
-			          <span>Penerbit  :  <b>Lorem</b></span><br>
-			          <span>Kategori   : <b>Ipsum</b></span><br>
-			          <span>Ruangan    : <b>Blok A1</b></span><br>
+			          <span>{{$row->penerbit}}  :  <b>Lorem</b></span><br>
+			          <span>{{$row->judul_buku}}  : <b>Ipsum</b></span><br>
+			          <span>{{$row->judul_buku}}  : <b>Blok A1</b></span><br>
 			        </td>
 			        <td>
 			          <a href="/showbukuguest" class="btn btn-sm btn-info">
@@ -52,7 +53,10 @@
 			          </a>
 			        </td>
 			      </tr>
-			</table>			
+			      @endforeach
+			    </tbody>
+			</table>
+			{!! $data->links() !!}			
 		</div>
 		<div class="col-md-3 ml-2">
 			<div class="header">

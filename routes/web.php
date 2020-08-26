@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 // Page Guest
 Route::get('/', 'GuestController@index');
+Route::get('/daftarbuku', 'GuestController@daftarbuku')->name('daftarbuku');
 Route::get('/salam', 'GuestController@salam');
-Route::get('/daftarbuku', 'GuestController@daftarbuku');
 Route::get('/pinjambuku', 'GuestController@pinjambuku');
 Route::get('/loginuser', 'GuestController@loginuser');
 Route::get('/regisuser', 'GuestController@regisuser');
