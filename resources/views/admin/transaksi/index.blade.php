@@ -2,11 +2,38 @@
 
 @section('konten')
 
+
       <!-- Begin Page Content -->
       <div class="container-fluid">
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Transaksi</h1>
 
+          @if (session('store'))
+          <div class="alert alert-success alert-dismissible fade show">
+              <button type="button" class="close" data-dismiss="alert">
+                  <span>&times;</span>
+              </button>
+              <strong>Success!</strong> {{ session('destroy') }}.
+          </div>  
+          @endif
+
+          @if (session('update'))
+          <div class="alert alert-success alert-dismissible fade show">
+              <button type="button" class="close" data-dismiss="alert">
+                  <span>&times;</span>
+              </button>
+              <strong>Success!</strong> {{ session('destroy') }}.
+          </div>  
+          @endif
+
+          @if(session('destroy'))
+          <div class="alert alert-success alert-dismissible fade show">
+              <button type="button" class="close" data-dismiss="alert">
+                  <span>&times;</span>
+              </button>
+              <strong>Succes!</strong>{{ session('destroy')}}.
+          </div>
+          @endif
         <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -36,24 +63,26 @@
                           <th>transaksi</th><th></th>
                       </thead>
                       <tbody>
+                      @foreach($data as $row)
                         <tr>
                           <td>
-                            <img src="{{ url('images/mantappu.jpg') }}" width="100" class="img-thumbnail mr-3" align="left">
-                            <a href="/showtran" class="font-weight-normal">
-                                Matematika
+                            <a href="{{ route('transaksi.show',['transaksi'=>$row->id_transaksi]) }}" class="font-weight-normal">
+                                {{$row->judul_buku}}
                             </a><br>
-                            <span>Nama peminjam     :  <b>Lorem</b></span><br>
-                            <span>Jumlah peminjaman : <b>100</b></span><br>
+                            <span>Nama peminjam     : <b>{{$row->nama_peminjam}}</b></span><br>
+                            <span>Jumlah pinjam     : <b>{{$row->jumlah_pinjam}}</b></span><br>
+                            <span>Status            : <b>{{$row->status}}</b></span><br>
                           </td>
                           <td>
-                            <a href="/edittransaksi" class="btn btn-sm btn-warning">
+                            <!-- <a href="/edittransaksi" class="btn btn-sm btn-warning">
                               <i class="fas fa-edit"></i>
                             </a><br>
                             <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="">
                               <i class="fas fa-trash alt"></i>
-                            </button>
+                            </button> -->
                           </td>
                         </tr>
+                        @endforeach
                   </table>
                 </div>
               </div>

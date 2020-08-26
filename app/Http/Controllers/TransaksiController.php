@@ -19,8 +19,6 @@ class TransaksiController extends Controller
         $data = DB::table('tbl_transaksi')
                 ->where('tbl_transaksi.nama_peminjam','like',"%{$request->keyword}%")
                 ->paginate(20);
-
-
         return view('admin.transaksi.index',['data'=>$data],);
     }
 
@@ -51,33 +49,28 @@ class TransaksiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nisnnip'=>'required',
             'Nama_Peminjam'=>'required',
-            'kelas'=>'required',
-            'Alamat'=>'required',
-            'No_HP'=>'required',
-            'Judul_Buku'=>'required',
             'Jumlah_Pinjam'=>'required',
-            'Waktu_Peminjaman'=>'required',
-            'Waktu_kembali'=>'required',
-            'status'=>'required',
+            'Alamat'=>'required',
         ]);
 
-        Ruangan::create([
-            'nisn/nip'=>$request->nisnnip,
+        $jb = Buku::select('judul_buku')->where('id_buku', "{$request->id_buku}")->pluck('judul_buku')->first();
+
+        Transaksi::create([
+            'nisnnip'=>$request->nisnnip,
             'nama_peminjam'=>$request->Nama_Peminjam,
             'kelas_peminjam'=>$request->kelas,
             'alamat_peminjam'=>$request->Alamat,
             'nohp_peminjam'=>$request->No_HP,
             'id_buku'=>$request->id_buku,
-            'judul_buku'=>$request->Judul_Buku,
+            'judul_buku'=>$jb,
             'jumlah_pinjam'=>$request->Jumlah_Pinjam,
-            'waktu_peminjaman'=>$request->Waktu_peminjaman,
-            'waktu_kembali'=>$request->Waktu_Kembali,
+            'tanggal_peminjaman'=>$request->Tanggal_Peminjaman,
+            'tanggal_kembali'=>$request->Tanggal_Kembali,
             'status'=>$request->status,
         ]);
 
-        return redirect()->route('ruangan.index')->with('store','Berhasil disimpan!');
+        return redirect()->route('transaksi.index')->with('store','Berhasil disimpan!');
     }
 
     /**
@@ -86,9 +79,9 @@ class TransaksiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Transaksi $transaksi)
     {
-        //
+        return view('admin.transaksi.show',['row'=>$transaksi]);
     }
 
     /**
