@@ -14,13 +14,15 @@
             <p class="text-danger">*Untuk Meminjam buku ini, silahkan isi formulir dibawah ini dengan lengkap!</p>
             <form method="post" action="">
 
+              <!-- Nis -->
               <div class="form-group row">
-                <label for="jumlah" class="col-md-2 col-form-label col-form-label-md">Jumlah</label>
-                <div class="col-md-3 col-md-offset-7">
-                  <input type="number" name="jumlah" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan Jumlah" required>
+                <label for="Nis" class="col-md-2 col-form-label col-form-label-md">Nis/Nip</label>
+                <div class="col-md-10">
+                  <input type="text" name="Nis" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan nama" required>
                 </div>
               </div>
 
+              <!-- Nama -->
               <div class="form-group row">
                 <label for="nama" class="col-md-2 col-form-label col-form-label-md">Nama</label>
                 <div class="col-md-10">
@@ -28,13 +30,7 @@
                 </div>
               </div>
 
-              <div class="form-group row">
-                <label for="phone" class="col-md-2 col-form-label col-form-label-md">No wa/hp</label>
-                <div class="col-md-10">
-                  <input type="text" name="phone" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan nomor hp" required>
-                </div>
-              </div>
-
+              <!-- Kelas -->
               <div class="form-group row">
                 <label for="kelas" class="col-md-2 col-form-label col-form-label-md">Kelas</label>
                 <div class="col-md-10">
@@ -42,28 +38,6 @@
                 </div>
               </div>
 
-              <div class="form-group row">
-                <label for="durasi" class="col-md-2 col-form-label col-form-label-md">Durasi pinjam</label>
-                <div class="col-md-10">
-                  <select class="custom-select" id="durasi">
-                    <option selected>Chosee</option>
-                    <option value="1">1 Hari</option>
-                    <option value="2">2 Hari</option>
-                    <option value="3">3 Hari</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="alamat" class="col-md-2 col-form-label col-form-label-md">Alamat Lengkap</label>
-                <div class="col-md-10">
-                  <textarea class="form-control" name="alamat" rows="3" placeholder="" required>
-                  </textarea>
-                  <h15>Alamat harus lengkap, beserta dengan kode pos,<br>
-                     Contoh : Dusun babakanjaya, Rt 54/69, Desa kedungwuluh, kecamatan
-                     Padaherang, Kabupaten Pangandaran, Provinsi Jabar Kode pos 46384</h15>
-                </div>
-              </div>
               <button type="submit" class="btn btn-info">Submit pesan</button>
               <a href="/" class="btn btn-danger">Cancel</a> 
           </form>

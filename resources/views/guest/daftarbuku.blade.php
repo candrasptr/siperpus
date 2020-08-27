@@ -47,6 +47,9 @@
 			          <a href="/showbukuguest" class="btn btn-sm btn-info">
 			            Selengkapnya
 			          </a>
+			          <a href="/pinjambuku" class="btn btn-sm btn-success ml-3">
+			            Pinjam
+			          </a>
 			        </td>
 			      </tr>
 			</table>			
