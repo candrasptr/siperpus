@@ -190,7 +190,7 @@
                  <!-- /.row -->
 
                  <ul class="pagination justify-content-center">
-                   <a href="/daftarbuku" id="btnsemua" class="btn btn-info px-5">Semua buku</a>
+                   <a href="{{route('daftarbuku')}}" id="btnsemua" class="btn btn-info px-5">Semua buku</a>
                  </ul>
 
                </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Buku;
+use App\Kategori;
+use Illuminate\Support\Facades\DB;
 
 class GuestController extends Controller
 {
@@ -11,6 +13,20 @@ class GuestController extends Controller
         $data = Buku::paginate(8);
 
         return view('guest.welcome',['data'=>$data]);
+    }
+
+    public function daftarbuku()
+    {
+        $data = Buku::paginate(8);
+
+        return view('guest.daftarbuku',['data'=>$data]);
+    }
+
+    public function kategori(Kategori $kategori)
+    {
+        $data = Buku::where('id_kategori',$kategori->id_kategori)->paginate(8);
+
+		return view('guest.daftarbukukategori',['data'=>$data,'kategori'=>$kategori]);
     }
 
     public function salam(){
@@ -21,9 +37,6 @@ class GuestController extends Controller
         return view('guest.about');
     }
 
-    public function daftarbuku(){
-        return view('guest.daftarbuku');
-    }
 
     public function pinjambuku(){
         return view('guest.pinjam');
