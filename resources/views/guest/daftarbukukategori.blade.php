@@ -62,9 +62,11 @@
 			{!! $data->links() !!}			
 		</div>
 		<div class="col-md-3 ml-2">
+
 			<div class="header">
 				<span id="bo">Buku Favorit<hr class="hrprofil"></span>
 			</div>
+
 			<div class="row mt-3">
 				<div class="col-sm-3">
 					<img style="width: 80px;" src="{{ url('images/mantappu.jpg') }}">
@@ -74,10 +76,12 @@
 					<p class="text-secondary" style="font-size: 13px;">Teratas no 1</p>
 				</div>
 			</div>
+
 			<div class="row mt-3">
 				<div class="col-sm-3">
 					<img style="width: 80px;" src="{{ url('images/mantappu.jpg') }}">
 				</div>
+
 				<div class="col-sd-3 ml-3">
 					<p id="me" style="font-size: 13px;" class="text-right">Matematika VII</p>
 					<p class="text-secondary" style="font-size: 13px;">Teratas no 2</p>

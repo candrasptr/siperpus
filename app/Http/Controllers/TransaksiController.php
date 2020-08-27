@@ -55,7 +55,11 @@ class TransaksiController extends Controller
         ]);
 
         $jb = Buku::select('judul_buku')->where('id_buku', "{$request->id_buku}")->pluck('judul_buku')->first();
-
+        $jumlah_buku = Buku::select('jumlah_buku')->where('id_buku', "{$request->id_buku}")->pluck('jumlah_buku')->first();
+        $aritmatika = $jumlah_buku - $request->Jumlah_Pinjam;
+        $querybuku = [
+            'jumlah_buku'=>$aritmatika,
+        ];
         Transaksi::create([
             'nisnnip'=>$request->nisnnip,
             'nama_peminjam'=>$request->Nama_Peminjam,
@@ -69,7 +73,8 @@ class TransaksiController extends Controller
             'tanggal_kembali'=>$request->Tanggal_Kembali,
             'status'=>$request->status,
         ]);
-
+        
+        Buku::where('id_buku',"{$request->id_buku}")->update(['jumlah_buku' => $aritmatika]);
         return redirect()->route('transaksi.index')->with('store','Berhasil disimpan!');
     }
 

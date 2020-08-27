@@ -76,7 +76,7 @@
          <div id="list-buku"></div>
          <div class="form-group">
           <label for="exampleInputEmail1">Jumlah Pinjam</label>
-          <input name="Jumlah_Pinjam" value="" type="number" class="form-control @error('Jumlah_Pinjam') is-invalid @enderror " id="" placeholder="masukan Jumlah Pinjam">
+          <input name="Jumlah_Pinjam" value="1" type="number" class="form-control @error('Jumlah_Pinjam') is-invalid @enderror " id="" placeholder="masukan Jumlah Pinjam">
           @error('Jumlah_Pinjam')
               <div class="invalid-feedback">
                 {{ $message }}
@@ -85,14 +85,20 @@
          </div>
 
          <div class="form-group">
+          <label for="exampleInputEmail1">Lama Pinjam</label>
+          <input name="lama_pinjam" value="0" type="number" class="col-md-2 form-control" id="hari" placeholder="Masukan lama pinjam dengan hitungan hari">
+         </div>
+
+         <div class="form-group">
           <label for="exampleInputEmail1">Tanggal Pinjam</label>
-          <input name="Tanggal_Peminjaman" value="" type="date" class="col-md-2 form-control" id="datetimepicker" placeholder="masukan Waktu Peminjaman">
+          <input name="Tanggal_Peminjaman" value="" type="date" class="col-md-2 form-control" id="date1" onchange="setSecondDate();" placeholder="masukan Waktu Peminjaman">
          </div>
 
          <div class="form-group">
           <label for="exampleInputEmail1">Tanggal Kembali</label>
-          <input name="Tanggal_Kembali" value="" type="date" class="col-md-2 form-control" id="" placeholder="masukan Waktu Kembali">
+          <input name="Tanggal_Kembali" value="" type="date" class="col-md-2 form-control" id="date2" placeholder="masukan Waktu Kembali">
          </div>
+         
 
          <div class="form-group">
           <label for="exampleFormControlSelect1">Example select</label>
@@ -110,6 +116,14 @@
   </div>
 </div>
     
+<script>
+
+  function setSecondDate() {
+    var days = document.getElementById("hari").value;
+    var date = new Date(document.getElementById("date1").value);
+    date.setDate(date.getDate() + parseInt(days));
+    document.getElementById("date2").valueAsDate = date;
+}
 </script>
 
 
