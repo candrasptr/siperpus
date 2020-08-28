@@ -41,8 +41,9 @@ Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
     Route::get('/dashboard', 'AdminController@dashboard');
     Route::get('/regis', 'AdminController@regis');
     Route::get('/showbuku', 'BukuController@showbuku');
-    // profile
-    Route::get('/profile', 'AdminController@profile');
+    // buku tamu
+    Route::get('/bukutamu', 'AdminController@bukutamu');
+    Route::get('/editbukutamu', 'AdminController@editbukutamu');
     // buku
     Route::resource('buku', 'BukuController');
     // kategori

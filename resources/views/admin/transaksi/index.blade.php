@@ -74,12 +74,12 @@
                             <span>Status            : <b>{{$row->status}}</b></span><br>
                           </td>
                           <td>
-                            <!-- <a href="/edittransaksi" class="btn btn-sm btn-warning">
+                            <a href="/edittransaksi" class="btn btn-sm btn-warning">
                               <i class="fas fa-edit"></i>
                             </a><br>
                             <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="">
                               <i class="fas fa-trash alt"></i>
-                            </button> -->
+                            </button>
                           </td>
                         </tr>
                         @endforeach

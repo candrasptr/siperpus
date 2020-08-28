@@ -51,14 +51,6 @@
                 </div>
               </div>
 
-              <!-- Jumlah -->
-              <div class="form-group row">
-                <label for="jumlah" class="col-md-3 col-form-label col-form-label-md">Jumlah halaman</label>
-                <div class="col-md-2 col-md-offset-7">
-                  <input type="number" name="jumlah" class="form-control form-control-md border bg-light" id="colFormLabelSm" disabled value="{{$row->jumlah_halaman}}">
-                </div>
-              </div>
-
               <!-- Pengarang -->
               <div class="form-group row">
                 <label for="Pengarang" class="col-md-3 col-form-label col-form-label-md">Pengarang</label>

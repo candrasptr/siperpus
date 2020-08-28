@@ -38,12 +38,12 @@
                     <label for="kelas" class="col-md-2 col-form-label col-form-label-md">Kelas</label>
                     <div class="col-md-9">
                       <input type="text" name="kelas" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan kelas" required>
+                      <button type="submit" class="btn btn-info mt-3 px-4 float-right">Submit</button>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-info mt-3 px-4 float-right">Submit</button>
           </form>
         </div>
       </div>

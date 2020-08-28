@@ -143,8 +143,12 @@ class AdminController extends Controller
         }
     
         // Profile
-        public function profile(){
-            return view('admin.profile');
+        public function bukutamu(){
+            return view('admin/bukutamu.index');
+        }
+
+        public function editbukutamu(){
+            return view('admin/bukutamu.edit');
         }
     
         // buku

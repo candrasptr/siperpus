@@ -35,16 +35,6 @@
         </div>
 
         <div class="form-group">
-          <label for="exampleInputPassword1">jumlah halaman</label>
-          <input type="number" class="form-control form-control @error('jumlah_halaman') is-invalid @enderror" id="" placeholder="jumlah halaman" name="jumlah_halaman">
-          @error('jumlah_halaman')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-          @enderror
-        </div>
-
-        <div class="form-group">
           <label for="exampleInputPassword1">pengarang</label>
           <input type="text" class="form-control form-control @error('pengarang') is-invalid @enderror" id="" placeholder="pengarang" name="pengarang">
           @error('pengarang')

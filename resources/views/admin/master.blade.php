@@ -58,6 +58,13 @@
         Admin
       </div>
 
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('inputtransaksi')}}">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Transaksi</span></a>
+      </li>
+
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="{{route('buku.index')}}">
@@ -81,23 +88,9 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="/laporan">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Laporan</span></a>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
         <a class="nav-link" href="/transaksi">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Transaksi</span></a>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="{{route('inputtransaksi')}}">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Petugas</span></a>
+          <span>Log Transaksi</span></a>
       </li>
 
       <!-- Nav Item - Charts -->
@@ -107,6 +100,19 @@
           <span>Manajemen Petugas</span></a>
       </li>
 
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="/bukutamu">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Buku Tamu</span></a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="/laporan">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Laporan</span></a>
+      </li>
 
 
       <!-- Divider -->
