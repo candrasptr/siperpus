@@ -30,7 +30,7 @@
           @enderror
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="/kategori" class="btn btn-danger">Cancel</a>
+        <a href="{{route('kategori.index')}}" class="btn btn-danger">Cancel</a>
       </form>
     </div>
     

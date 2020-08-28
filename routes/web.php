@@ -18,6 +18,7 @@ Route::get('/', 'GuestController@home');
 Route::get('/home', 'GuestController@index');
 Route::get('daftarbuku', 'GuestController@daftarbuku')->name('daftarbuku');
 Route::get('daftarbuku/kategori/{kategori}', 'GuestController@kategori')->name('kategoribuku');
+Route::get('Detailbuku/{buku}', 'GuestController@showbuku')->name('guest.showbuku');
 Route::get('/daftarbuku', 'GuestController@daftarbuku')->name('daftarbuku');
 Route::get('/salam', 'GuestController@salam');
 Route::get('/pinjambuku', 'GuestController@pinjambuku');
@@ -38,7 +39,7 @@ Route::group(['middleware' => 'SudahLoginMiddleware'], function() {
 
 // PAGE ADMIN
 Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
-    Route::get('/dashboard', 'AdminController@dashboard');
+    Route::get('/dashboard', 'DashboardController@index');
     Route::get('/regis', 'AdminController@regis');
     Route::get('/showbuku', 'BukuController@showbuku');
     // buku tamu
@@ -59,6 +60,7 @@ Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
     // transaksi
     Route::resource('transaksi','TransaksiController');
     route::get('inputtransaksi','TransaksiController@inputtransaksi')->name('inputtransaksi');
+    route::get('transaksi/selesai/{transaksi}','TransaksiController@transaksiselesai')->name('transaksi.selesai');
     Route::get('/edittransaksi', 'AdminController@edittransaksi');
     Route::get('/showtran', 'AdminController@showtran');
     //logout

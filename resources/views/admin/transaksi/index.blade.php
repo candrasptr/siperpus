@@ -34,6 +34,15 @@
               <strong>Succes!</strong>{{ session('destroy')}}.
           </div>
           @endif
+
+          @if(session('gagal'))
+          <div class="alert alert-danger alert-dismissible fade show">
+              <button type="button" class="close" data-dismiss="alert">
+                  <span>&times;</span>
+              </button>
+              <strong>Gagal! </strong>{{ session('gagal')}}.
+          </div>
+          @endif
         <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -71,15 +80,23 @@
                             </a><br>
                             <span>Nama peminjam     : <b>{{$row->nama_peminjam}}</b></span><br>
                             <span>Jumlah pinjam     : <b>{{$row->jumlah_pinjam}}</b></span><br>
-                            <span>Status            : <b>{{$row->status}}</b></span><br>
+                            <span>Status            : 
+                            @if($row->status === 'SELESAI')
+                            <b class="text-success"> SELESAI</b>
+                            @elseif($row->status === 'DIPINJAM')
+                            <b class="text-warning"> DIPINJAM</b>
+                            @elseif($row->status === 'KADALUARSA')
+                            <b class="text-danger"> KADALUARSA</b>
+                            @endif
+                            </span><br>
                           </td>
                           <td>
-                            <a href="/edittransaksi" class="btn btn-sm btn-warning">
-                              <i class="fas fa-edit"></i>
-                            </a><br>
-                            <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="">
-                              <i class="fas fa-trash alt"></i>
-                            </button>
+                          <button class="btn btn-sm btn-success tombol-selesai mt-2" type="button" data-url="{{ route('transaksi.selesai',['transaksi'=>$row->id_transaksi]) }}">
+                            SELESAI
+                          </button>
+                              <!-- <a href="{{ route('transaksi.selesai',['transaksi'=>$row->id_transaksi]) }}" class="btn btn-sm btn-success ml-2">
+                                SELESAI
+                              </a> -->
                           </td>
                         </tr>
                         @endforeach
@@ -94,6 +111,45 @@
 <!-- /.container-fluid -->
   
 @endsection
+@push('modal')
+<div class="modal fade" tabindex="-1" id="modalSelesai">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-check"> </i> Selesai
+                </h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah yakin akan Selesaikan Peminjaman?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <form action="#" method="post">
+                    @method('GET')
+                    @csrf
+                    <button type="submit" class="btn btn-primary">Ya,Selesai!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@endpush
+
+@push('js')
+<script>
+    $(function(){
+        $('.tombol-selesai').click(function(){
+            var url = $(this).attr('data-url');
+            $("#modalSelesai form").attr('action',url);
+            $('#modalSelesai').modal('show');
+        });
+    });
+</script>
+@endpush      
 
 
 

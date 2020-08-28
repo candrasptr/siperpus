@@ -10,17 +10,32 @@ use Illuminate\Support\Facades\DB;
 
 class GuestController extends Controller
 {
-    public function index(){
-        $data = Buku::paginate(8);
+    public function index(Request $request){
+        $data = DB::table('tbl_buku')
+                ->where('tbl_buku.judul_buku','like',"%{$request->keyword}%")
+                ->orWhere('tbl_buku.penerbit','like',"%{$request->keyword}%")
+                ->paginate(8);
+
 
         return view('guest.welcome',['data'=>$data]);
     }
 
 
-    public function daftarbuku(){
-        $data = Buku::paginate(8);
+    public function daftarbuku(Request $request){
+        $data = DB::table('tbl_buku')
+                ->join('tbl_kategori','tbl_kategori.id_kategori','=','tbl_buku.id_kategori')
+                ->join('tbl_ruangan','tbl_ruangan.id_ruangan','=','tbl_buku.id_ruangan')
+                ->where('tbl_buku.judul_buku','like',"%{$request->keyword}%")
+                ->orWhere('tbl_buku.penerbit','like',"%{$request->keyword}%")
+                ->orderBy('tbl_ruangan.id_ruangan')
+                ->paginate(8);
 
         return view('guest.daftarbuku',['data'=>$data]);
+    }
+
+    public function showbuku(Buku $buku)
+    {
+        return view('guest.show',['row'=>$buku]);
     }
 
     public function kategori(Kategori $kategori)

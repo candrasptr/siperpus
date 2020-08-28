@@ -20,14 +20,18 @@
 				</div>
 			</li>
 		</div>
+		
 		<div class="col-md-2 offset-md-3">
-			<div class="input-group mb-3">
-			  <input id="caribuku" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2">
-			  <div class="input-group-append">
-			    <button id="btncaribuku" class="btn btn-outline-secondary" type="button" id="button-addon2"><i id="icaribuku" class="fas fa-search"></i></button>
-			  </div>
-			</div>
+			<form action="?" method="GET">
+				<div class="input-group mb-3">
+					<input name="keyword" id="caribuku" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2" value="{{ Request()->keyword }}">
+					<div class="input-group-append">
+						<button id="btncaribuku" class="btn btn-outline-secondary bg-info" type="submit" id="button-addon2"><i class="fas fa-search text-light"></i></button>
+					</div>
+				</div>
+			</form>
 		</div>
+
 		<div class="col-md-7 offset-md-1">
 			<table class="table">
 			    <thead>

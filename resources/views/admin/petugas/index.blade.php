@@ -8,16 +8,6 @@
     <div class="col-md-12">
       <h3>Input data Transaksi</h3>
     </div>
-    <div class="col-md-4 offset-md-8">
-      <form action="?" method="GET">
-        <div class="input-group mb-3">
-            <input name="keyword" id="carikategori" type="text" class="form-control" placeholder="Masukan ID Transaksi" aria-label="Cari" aria-describedby="button-addon2" value="{{ Request()->keyword }}">
-           <div class="input-group-append">
-            <button id="btncarikategori" class="btn btn-outline-secondary bg-primary" type="submit" id="button-addon2"><i class="fas fa-search text-light"></i></button>
-          </div>
-        </div>
-      </form>
-    </div>
 
     <div class="col-md-12 ">
     <form action="{{route('transaksi.store')}}" method="POST">
@@ -98,23 +88,22 @@
           <label for="exampleInputEmail1">Tanggal Kembali</label>
           <input name="Tanggal_Kembali" value="" type="date" class="col-md-2 form-control" id="date2" placeholder="masukan Waktu Kembali">
          </div>
-         
-
-         <div class="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
-          <select name="status" class="form-control" id="exampleFormControlSelect1">
-            <option value="DIPINJAM">DIPINJAM</option>
-            <option value="DIPESAN">DIPESAN</option>
-            <option value="SELESAI">SELESAI</option>
-            <option value="KADALUARSA">KADALUARSA</option>
-          </select>
-        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="/petugas" class="btn btn-danger">Cancel</a>
+        <a href="{{route('inputtransaksi')}}" class="btn btn-danger">Cancel</a>
       </form>
     </div>
   </div>
 </div>
+
+<script>
+  var today = new Date();
+  var dd = ("0" + (today.getDate())).slice(-2);
+  var mm = ("0" + (today.getMonth() +　1)).slice(-2);
+  var yyyy = today.getFullYear();
+  today = yyyy + '-' + mm + '-' + dd ;
+  $("#date1").attr("value", today);
+  $("#date2").attr("value", today);
+</script>
     
 <script>
 

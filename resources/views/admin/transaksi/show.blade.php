@@ -93,7 +93,7 @@
                   <input value="{{$row->status}}" type="text" name="Status" class="form-control form-control-md border bg-light" id="colFormLabelSm" disabled value="">
                 </div>
               </div>
-              <a href="?page=home" class="btn btn-danger">Kembali</a> 
+              <a href="{{route('transaksi.index')}}" class="btn btn-danger">Kembali</a> 
         </div>
       </div>
     </div>

@@ -84,12 +84,14 @@
                     <h4 class="text-center mb-4" id="sb">Daftar Buku <hr id="hr"></h4>
                   </div>
                   <div class="col-md-8 offset-md-2 mb-4">
-                    <div class="input-group mb-3">
-                      <input id="caribuku" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2">
-                      <div class="input-group-append">
-                        <button id="btncaribuku" class="btn btn-outline-secondary" type="button" id="button-addon2"><i id="icaribuku" class="fas fa-search"></i></button>
+                    <form action="?" method="GET">
+                      <div class="input-group mb-3">
+                        <input name="keyword" id="caribuku" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2" value="{{ Request()->keyword }}">
+                        <div class="input-group-append">
+                          <button id="btncaribuku" class="btn btn-outline-secondary bg-info" type="submit" id="button-addon2"><i class="fas fa-search text-light"></i></button>
+                        </div>
                       </div>
-                    </div>
+                    </form>
                   </div>
                   @foreach($data as $row)
                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
@@ -101,7 +103,7 @@
                          </h4>
                          <p class="card-text">{{$row->deskripsi}}</p> 
                        </div>
-                       <div class="card-footer"><a href="" class="btn btn-info btn-block">Selengkapnya</a></div>
+                       <div class="card-footer"><a href="{{route('guest.showbuku',['buku'=>$row->id_buku])}}" class="btn btn-info btn-block">Selengkapnya</a></div>
                      </div>
                    </div>
                    @endforeach

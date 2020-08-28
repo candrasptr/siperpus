@@ -18,6 +18,11 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ url('js/Chart.js')}}"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   <!-- Custom styles for this template-->
   <link href="{{ url('css/sb-admin-2.min.css')}}" rel="stylesheet">
   
@@ -65,6 +70,13 @@
           <span>Transaksi</span></a>
       </li>
 
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="/transaksi">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Log Transaksi</span></a>
+      </li>
+
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="{{route('buku.index')}}">
@@ -84,13 +96,6 @@
         <a class="nav-link" href="{{route('ruangan.index')}}">
           <i class="fas fa-fw fa-folder"></i>
           <span>Ruangan</span></a>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="/transaksi">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Log Transaksi</span></a>
       </li>
 
       <!-- Nav Item - Charts -->

@@ -139,7 +139,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="/buku" class="btn btn-danger">Cancel</a>
+        <a href="{{route('buku.index')}}" class="btn btn-danger">Cancel</a>
       </form>
     </div>
   </div>

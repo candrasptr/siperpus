@@ -30,11 +30,10 @@
               </div>
           @enderror
         </div>
-        <button type="s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ubmit" class="btn btn-primary">Submit</button>
-        <a href="/kategori" class="btn btn-danger">Cancel</a>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{{route('kategori.index')}}" class="btn btn-danger">Cancel</a>
       </form>
     </div>
-    
   </div>
 </div>
 

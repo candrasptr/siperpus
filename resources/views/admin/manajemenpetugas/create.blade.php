@@ -38,7 +38,7 @@
           @enderror
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="/Admin" class="btn btn-danger">Cancel</a>
+        <a href="{{route('admin.index')}}" class="btn btn-danger">Cancel</a>
       </form>
     </div>
   </div>

@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('guest.master')
 
 @section('konten')
 
