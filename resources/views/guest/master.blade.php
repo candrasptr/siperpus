@@ -40,7 +40,10 @@
                               <div class="col-md-12">
                                 <ul class="navbar-nav justify-content-center mt-2 mt-sm-0 ">
                                   <li class="nav-item active mr-5">
-                                    <a id="re" class="nav-link text-dark" href="/">Home <span class="sr-only">(current)</span></a>
+                                    <a id="re" class="nav-link text-dark" href="/home">Home <span class="sr-only">(current)</span></a>
+                                  </li>
+                                  <li class="nav-item active mr-5">
+                                    <a id="re" class="nav-link text-dark" href="/">Buku Tamu <span class="sr-only">(current)</span></a>
                                   </li>
                                   <li class="nav-item active mr-5">
                                     <a id="re" class="nav-link text-dark" href="/daftarbuku">Buku <span class="sr-only">(current)</span></a>

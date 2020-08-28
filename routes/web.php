@@ -14,13 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Page Guest
-Route::get('/', 'GuestController@index');
-<<<<<<< HEAD
+Route::get('/', 'GuestController@home');
+Route::get('/home', 'GuestController@index');
 Route::get('daftarbuku', 'GuestController@daftarbuku')->name('daftarbuku');
 Route::get('daftarbuku/kategori/{kategori}', 'GuestController@kategori')->name('kategoribuku');
-=======
 Route::get('/daftarbuku', 'GuestController@daftarbuku')->name('daftarbuku');
->>>>>>> 7d3ee3124e14eb1dc4133dc52041e481fcc24410
 Route::get('/salam', 'GuestController@salam');
 Route::get('/pinjambuku', 'GuestController@pinjambuku');
 Route::get('/loginuser', 'GuestController@loginuser');

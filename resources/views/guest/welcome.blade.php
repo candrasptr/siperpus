@@ -56,7 +56,10 @@
                   <div class="col-md-12">
                     <ul class="navbar-nav justify-content-center mt-2 mt-sm-0 ">
                       <li class="nav-item active mr-5">
-                        <a id="re" class="nav-link text-dark" href="/">Home <span class="sr-only">(current)</span></a>
+                        <a id="re" class="nav-link text-dark" href="/home">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active mr-5">
+                        <a id="re" class="nav-link text-dark" href="/">Buku Tamu <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item active mr-5">
                         <a id="re" class="nav-link text-dark" href="/daftarbuku">Buku <span class="sr-only">(current)</span></a>
@@ -70,106 +73,23 @@
             </nav>
          <!-- end navbar -->
 
-              <!-- banner -->
-              <!-- end banner -->
-
-              <!-- <div class="row mt-5">
-                <div class="col-md-12">
-                  <h4 class="text-center" id="sb">Profile <hr id="hr"></h4>
-                </div>
-              </div> -->
-
-
-               <!-- Selamat datang -->
-               <!-- <div class="container-fluid">
-                 <div class="row">
-                   <div class="col-md-5 offset-md-1 mt-5">
-                     <h5 id="sb">Selamat datang di</h5><h5 id="tp"><span>SMPN 1 KALIPUCANG <hr class="garis"></span></h5>
-                     <p class="mt-3">Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho Lorem ipsum sit dolor amet ya kan baka aho</p>
-                     <a href="/salam" id="btnselengkapnya" class="btn btn-info"><span id="re" class="text-light">Selengkapnya</span></a>
-                   </div>
-                   <div class="col-md-5 mt-5">
-                     <div id="images1"></div>
-                   </div>
-                 </div>
-               </div> -->
-               <!-- end selamat datang -->
-
-               <!-- daftar buku -->
-               <!-- <div class="container-fluid mt-5 ">
-                 <div class="row">
-                   <div class="col-md-12">
-                     <h4 class="text-center" id="sb">Daftar Buku <hr id="hr"></h4>
-                   </div>
-                   <div class="col-md-3 offset-md-2 mt-3">
-                     <div class="card" style="width: 14rem;">
-                       <img class="card-img-top" style="width: 200px;" src="{{ url('images/mantappu.jpg') }}" alt="Foto buku">
-                       <div class="card-body">
-                         <h5 class="card-title">Matematika Kelas VII</h5>
-                         <a href="/pinjambuku" class="btn btn-info btn-sm btn-block">Selengkapnya</a>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col-md-3 mt-3">
-                     <div class="card" style="width: 14rem;">
-                       <img class="card-img-top" style="width: 200px;" src="{{ url('images/mantappu.jpg') }}" alt="Foto buku">
-                       <div class="card-body">
-                         <h5 class="card-title">Matematika Kelas VII</h5>
-                         <a href="#" class="btn btn-info btn-sm btn-block">Selengkapnya</a>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col-md-3 mt-3">
-                     <div class="card" style="width: 14rem;">
-                       <img class="card-img-top" style="width: 200px;" src="{{ url('images/mantappu.jpg') }}" alt="Foto buku">
-                       <div class="card-body">
-                         <h5 class="card-title">Matematika Kelas VII</h5>
-                         <a href="#" class="btn btn-info btn-sm btn-block ">Selengkapnya</a>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col-md-3 mt-3 offset-md-2">
-                     <div class="card" style="width: 14rem;">
-                       <img class="card-img-top" style="width: 200px;" src="{{ url('images/mantappu.jpg') }}" alt="Foto buku">
-                       <div class="card-body">
-                         <h5 class="card-title">Matematika Kelas VII</h5>
-                         <a href="/pinjambuku" class="btn btn-info btn-sm btn-block">Selengkapnya</a>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col-md-3 mt-3">
-                     <div class="card" style="width: 14rem;">
-                       <img class="card-img-top" style="width: 200px;" src="{{ url('images/mantappu.jpg') }}" alt="Foto buku">
-                       <div class="card-body">
-                         <h5 class="card-title">Matematika Kelas VII</h5>
-                         <a href="/pinjambuku" class="btn btn-info btn-sm btn-block">Selengkapnya</a>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col-md-3 mt-3">
-                     <div class="card" style="width: 14rem;">
-                       <img class="card-img-top" style="width: 200px;" src="{{ url('images/mantappu.jpg') }}" alt="Foto buku">
-                       <div class="card-body">
-                         <h5 class="card-title">Matematika Kelas VII</h5>
-                         <a href="/pinjambuku" class="btn btn-info btn-sm btn-block">Selengkapnya</a>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col-md-2 offset-md-5">
-                       <a href="/daftarbuku" id="btnsemua" class="btn btn-info shadow-sm mx-auto d-block"><span id="re" class="text-light text-center">Semua Buku</span></a>
-                   </div>
-                 </div>
-               </div> -->
-               <!-- end daftar buku -->
-
-               <!-- go -->
+              
                <!-- Page Content -->
                <div class="container mt-5">
 
                  <!-- Page Heading -->
                  <div class="row">
+                  
                   <div class="col-md-12">
                     <h4 class="text-center mb-4" id="sb">Daftar Buku <hr id="hr"></h4>
+                  </div>
+                  <div class="col-md-8 offset-md-2 mb-4">
+                    <div class="input-group mb-3">
+                      <input id="caribuku" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                        <button id="btncaribuku" class="btn btn-outline-secondary" type="button" id="button-addon2"><i id="icaribuku" class="fas fa-search"></i></button>
+                      </div>
+                    </div>
                   </div>
                   @foreach($data as $row)
                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
