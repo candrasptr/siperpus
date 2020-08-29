@@ -8,7 +8,7 @@
       <h3>Edit Buku</h3>
     </div>
     <div class="col-md-12">
-      <form action="{{ route('buku.update',['buku'=>$row->id_buku]) }}" method="POST" enctype="multipart/form-data">
+      <form action="{{ route('buku.update',['Bukutamu'=>$row->id_buku]) }}" method="POST" enctype="multipart/form-data">
 
         @csrf
 			  @method('PUT')
@@ -37,7 +37,7 @@
 
         <div class="form-group">
           <label for="exampleInputPassword1">pengarang</label>
-          <input value="{{ old('jumlah_halaman',$row->jumlah_halaman) }}" type="text" class="form-control form-control @error('pengarang') is-invalid @enderror" id="" placeholder="pengarang" name="pengarang">
+          <input value="{{ old('pengarang',$row->pengarang) }}" type="text" class="form-control form-control @error('pengarang') is-invalid @enderror" id="" placeholder="pengarang" name="pengarang">
           @error('pengarang')
               <div class="invalid-feedback">
                 {{ $message }}
@@ -89,8 +89,18 @@
         </div>
 
         <div class="form-group">
+          <label for="exampleInputPassword1">jumlah buku Total</label>
+          <input value="{{ old('jumlah_buku_total',$row->jumlah_buku_total) }}" type="number" class="form-control @error('jumlah_buku_total') is-invalid @enderror" id="" placeholder="jumlah buku" name="jumlah_buku_total">
+          @error('jumlah_buku_total')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+          @enderror
+        </div>
+
+        <div class="form-group">
           <label for="exampleInputPassword1">jumlah buku</label>
-          <input value="{{ old('jumlah_buku',$row->jumlah_buku) }}" type="number" class="form-control form-control @error('jumlah_buku') is-invalid @enderror" id="" placeholder="jumlah buku" name="jumlah_buku">
+          <input value="{{ old('jumlah_buku',$row->jumlah_buku) }}" type="number" class="form-control @error('jumlah_buku') is-invalid @enderror" id="" placeholder="jumlah buku" name="jumlah_buku">
           @error('jumlah_buku')
               <div class="invalid-feedback">
                 {{ $message }}
@@ -100,7 +110,7 @@
 
         <div class="form-group">
           <label for="exampleInputPassword1">jumlah buku diluar</label>
-          <input value="{{ old('jumlah_buku_diluar',$row->jumlah_buku_diluar) }}" type="number" class="form-control form-control @error('jumlah_buku_diluar') is-invalid @enderror" id="" placeholder="jumlah buku diluar" name="jumlah_buku_diluar" value="0">
+          <input value="{{ old('jumlah_buku_diluar',$row->jumlah_buku_diluar) }}" type="number" class="form-control @error('jumlah_buku_diluar') is-invalid @enderror" id="" placeholder="jumlah buku diluar" name="jumlah_buku_diluar" value="0">
           @error('jumlah_buku_diluar')
               <div class="invalid-feedback">
                 {{ $message }}

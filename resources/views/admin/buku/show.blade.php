@@ -106,12 +106,16 @@
 
               <!-- Jumlah buku -->
               <div class="form-group row">
+                <label for="Jumlah buku" class="col-md-3 col-form-label col-form-label-md">Jumlah buku Total</label>
+                <div class="col-md-2">
+                  <input type="text" name="Jumlah buku" class="form-control form-control-md border bg-light" id="colFormLabelSm" disabled value="{{$row->jumlah_buku_total}}">
+                </div>
                 <label for="Jumlah buku" class="col-md-3 col-form-label col-form-label-md">Jumlah buku</label>
                 <div class="col-md-2">
                   <input type="text" name="Jumlah buku" class="form-control form-control-md border bg-light" id="colFormLabelSm" disabled value="{{$row->jumlah_buku}}">
                 </div>
-                <label for="jumlah" class="col-md-3 col-form-label col-form-label-md">Buku diluar</label>
-                <div class="col-md-2">
+                <label for="jumlah" class="col-md-3 col-form-label col-form-label-md mt-2">Buku diluar</label>
+                <div class="col-md-2 mt-2">
                   <input type="text" name="jumlah" class="form-control form-control-md border bg-light" id="colFormLabelSm" disabled value="{{$row->jumlah_buku_diluar}}">
                 </div>
               </div>

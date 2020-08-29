@@ -19,7 +19,7 @@ class TransaksiController extends Controller
     {
         $data = DB::table('tbl_transaksi')
                 ->where('tbl_transaksi.nama_peminjam','like',"%{$request->keyword}%")
-                ->orderBy('id_transaksi', 'ASC')
+                ->orderBy('id_transaksi', 'DESC')
                 ->paginate(20);
         return view('admin.transaksi.index',['data'=>$data]);
     }

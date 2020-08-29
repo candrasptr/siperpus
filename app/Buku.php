@@ -10,7 +10,7 @@ class Buku extends Model
     protected $primaryKey = "id_buku";
     public $timestamps = false;
     protected $fillable = [
-        'judul_buku','file_gambar_buku','jumlah_halaman','pengarang','penerbit','sinopsis','deskripsi','id_kategori','kelas','jumlah_buku','id_ruangan','jumlah_buku_diluar','status'
+        'judul_buku','file_gambar_buku','jumlah_halaman','pengarang','penerbit','sinopsis','deskripsi','id_kategori','kelas','jumlah_buku_total','jumlah_buku','id_ruangan','jumlah_buku_diluar','status'
     ];
 
     public function Tkategori()

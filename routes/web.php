@@ -43,9 +43,7 @@ Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
     Route::get('/regis', 'AdminController@regis');
     Route::get('/showbuku', 'BukuController@showbuku');
     // buku tamu
-    Route::get('/bukutamu', 'AdminController@bukutamu');
-    Route::get('/editbukutamu', 'AdminController@editbukutamu');
-    Route::get('/createbukutamu', 'AdminController@createbukutamu');
+    Route::resource('bukutamu', 'TamuController');
     // buku
     Route::resource('buku', 'BukuController');
     // kategori
@@ -53,7 +51,7 @@ Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
     // ruangan
     Route::resource('ruangan', 'RuanganController');
     // laporan
-    Route::get('/laporan', 'AdminController@laporan');
+    Route::get('/laporan', 'LaporanController@index')->name('laporan');
     // petugas
     Route::resource('admin', 'AdminController');
     Route::get('autocomplete', 'AdminController@autocomplete')->name('autocomplete');

@@ -33,7 +33,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Jumlah buku yang dipinjam (Bulan Ini)</div>
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Jumlah Transaksi (Bulan Ini)</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{$datapinjamperbulan}}</div>
                       </div>
                       <div class="col-auto">
@@ -76,7 +76,7 @@
             type: 'area'
         },
         title: {
-            text: 'Jumlah pengunjung dan Jumlah buku dipinjam Bulanan'
+            text: 'Jumlah pengunjung dan Jumlah Transaksi Bulanan'
         },
         subtitle: {
             text: ''
@@ -106,7 +106,7 @@
             name: 'Jumlah Pengunjung',
             data: datakunjungperbulanchrt
         },{
-            name: 'Jumlah Buku Dipinjam',
+            name: 'Jumlah Transaksi',
             data: datapinjamperbulanchrt
         }],
         responsive: {

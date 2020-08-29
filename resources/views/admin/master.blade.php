@@ -13,7 +13,8 @@
 
   <!-- Custom fonts for this template-->
   <link rel="stylesheet" href="{{ url('css/dropdownsearch.css')}}" type="text/css">
-  <link href="{{ url('icon/css/all.min.css')}}" rel="stylesheet" type="text/css"type="text/css">
+  <link href="{{ url('icon/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{url('css/customcol.css')}}" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -107,14 +108,14 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="/bukutamu">
+        <a class="nav-link" href="{{route('bukutamu.index')}}">
           <i class="fas fa-fw fa-folder"></i>
           <span>Buku Tamu</span></a>
       </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="/laporan">
+        <a class="nav-link" href="{{route('laporan')}}">
           <i class="fas fa-fw fa-folder"></i>
           <span>Laporan</span></a>
       </li>

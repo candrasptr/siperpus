@@ -7,6 +7,32 @@
   <!-- Page Heading -->
   <h1 class="h3 mb-2 text-gray-800">Kategori</h1>
 
+  @if (session('store'))
+          <div class="alert alert-success alert-dismissible fade show">
+              <button type="button" class="close" data-dismiss="alert">
+                  <span>&times;</span>
+              </button>
+              <strong>Success!</strong> {{ session('destroy') }}.
+          </div>  
+          @endif
+
+          @if (session('update'))
+          <div class="alert alert-success alert-dismissible fade show">
+              <button type="button" class="close" data-dismiss="alert">
+                  <span>&times;</span>
+              </button>
+              <strong>Success!</strong> {{ session('destroy') }}.
+          </div>  
+          @endif
+
+          @if(session('destroy'))
+          <div class="alert alert-success alert-dismissible fade show">
+              <button type="button" class="close" data-dismiss="alert">
+                  <span>&times;</span>
+              </button>
+              <strong>Succes!</strong>{{ session('destroy')}}.
+          </div>
+          @endif
           
 
   <!-- DataTales Example -->
@@ -19,7 +45,7 @@
             <div class="container-fluid">
             <div class="row">
             <div class="col-md-6">
-              <a href="/createbukutamu" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Buku Tamu</a>
+              <a href="{{route('bukutamu.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Buku Tamu</a>
             </div>
 
             <div class="col-md-4 offset-md-2">
@@ -37,25 +63,19 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Id</th>
-                  <th>Nama kategori</th>
-                  <th>Nis/Nip</th>
+                  <th>Nisn/Nip</th>
+                  <th>Nama</th>
                   <th>Kelas</th>
-                  <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
+              @foreach($data as $row)
                 <tr>
-                  <td>1</td>
-                  <td>Lorem</td>
-                  <td>123</td>
-                  <td>VII</td>
-                    <td>
-                    <a href="/editbukutamu" class="btn btn-sm btn-warning">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    </td>
+                  <td>{{$row->nisnnip}}</td>
+                  <td>{{$row->nama_tamu}}</td>
+                  <td>{{$row->kelas_tamu}}</td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

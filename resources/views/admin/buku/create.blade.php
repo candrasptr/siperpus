@@ -88,7 +88,17 @@
         </div>
 
         <div class="form-group">
-          <label for="exampleInputPassword1">jumlah buku</label>
+          <label for="exampleInputPassword1">Jumlah buku Total</label>
+          <input type="number" class="form-control form-control @error('jumlah_buku_total') is-invalid @enderror" id="" placeholder="jumlah buku total" name="jumlah_buku_total">
+          @error('jumlah_buku_total')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Jumlah buku</label>
           <input type="number" class="form-control form-control @error('jumlah_buku') is-invalid @enderror" id="" placeholder="jumlah buku" name="jumlah_buku">
           @error('jumlah_buku')
               <div class="invalid-feedback">
