@@ -57,6 +57,7 @@
                   <div class="chart-area">
                     <div id="myChart"></div>
                   </div>
+                  <br><br><br><br><br>
                 </div>
               </div>
             </div>

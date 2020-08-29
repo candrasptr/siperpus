@@ -147,6 +147,10 @@ class AdminController extends Controller
             return view('admin/bukutamu.index');
         }
 
+        public function createbukutamu(){
+            return view('admin/bukutamu.create');
+        }
+
         public function editbukutamu(){
             return view('admin/bukutamu.edit');
         }

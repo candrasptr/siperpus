@@ -19,6 +19,7 @@
             <div class="container-fluid">
             <div class="row">
             <div class="col-md-6">
+              <a href="/createbukutamu" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Buku Tamu</a>
             </div>
 
             <div class="col-md-4 offset-md-2">
@@ -52,10 +53,7 @@
                     <td>
                     <a href="/editbukutamu" class="btn btn-sm btn-warning">
                       <i class="fas fa-edit"></i>
-                    </a><br>
-                    <button class="btn btn-sm btn-danger tombol-hapus mt-2" type="button" data-url="">
-                      <i class="fas fa-trash alt"></i>
-                    </button>
+                    </a>
                     </td>
                 </tr>
               </tbody>

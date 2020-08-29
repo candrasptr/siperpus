@@ -45,6 +45,7 @@ Route::group(['middleware' => 'CheckLoginMiddleware'], function() {
     // buku tamu
     Route::get('/bukutamu', 'AdminController@bukutamu');
     Route::get('/editbukutamu', 'AdminController@editbukutamu');
+    Route::get('/createbukutamu', 'AdminController@createbukutamu');
     // buku
     Route::resource('buku', 'BukuController');
     // kategori
