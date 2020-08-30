@@ -9,8 +9,8 @@
       <div class="card rounded shadow">
         <h4 class="card-header">Buku Tamu</h4>
         <div class="card-body">
-            <form method="" action="/home">
-
+            <form method="POST" action="{{route('isibukutamu')}}">
+              @csrf
               <div class="row mt-3">
                 <div class="col-md-6">
                   <br><br>
@@ -21,7 +21,7 @@
                   <div class="form-group row">
                     <label for="Nis" class="col-md-2 col-form-label col-form-label-md">Nis/Nip</label>
                     <div class="col-md-9">
-                      <input type="text" name="Nis" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan nama" required>
+                      <input type="text" name="nisnnip" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan nama" required>
                     </div>
                   </div>
 
@@ -29,15 +29,20 @@
                   <div class="form-group row">
                     <label for="nama" class="col-md-2 col-form-label col-form-label-md">Nama</label>
                     <div class="col-md-9">
-                      <input type="text" name="nama" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan nama" required>
+                      <input type="text" name="nama_tamu" class="form-control form-control-md @error('nama_tamu') is-invalid @enderror" id="colFormLabelSm" placeholder="Masukan nama" required>
                     </div>
+                    @error('nama_tamu')
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                    @enderror
                   </div>
 
                   <!-- Kelas -->
                   <div class="form-group row">
                     <label for="kelas" class="col-md-2 col-form-label col-form-label-md">Kelas</label>
                     <div class="col-md-9">
-                      <input type="text" name="kelas" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan kelas" required>
+                      <input type="text" name="kelas_tamu" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan kelas" required>
                       <button type="submit" class="btn btn-info mt-3 px-4 float-right">Submit</button>
                     </div>
                   </div>

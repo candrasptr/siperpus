@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Tamu;
 use App\Buku;
+use Carbon\Carbon;
 
 class TamuController extends Controller
 {
@@ -21,6 +22,25 @@ class TamuController extends Controller
                 ->orderBy('id_tamu','DESC')
                 ->paginate(10);
         return view('admin.bukutamu.index',['data'=>$data]);
+    }
+
+    public function isibukutamu(Request $request)
+    {
+        $request->validate([
+            'nama_tamu'=>'required',
+            
+        ]);
+
+        $hariini = Carbon::now();
+
+        Tamu::create([
+            'nisnnip'=>$request->nisnnip,
+            'nama_tamu'=>$request->nama_tamu,
+            'kelas_tamu'=>$request->kelas_tamu,
+            'tanggal_kunjungan'=>$hariini
+        ]);
+
+        return view('guest.pinjam');
     }
 
     /**
