@@ -5,6 +5,14 @@
     box-shadow: 10px;
 }
 
+#bgbody {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
 #btnnav {
     background-color: black;
 }

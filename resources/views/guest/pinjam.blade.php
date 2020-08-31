@@ -1,65 +1,67 @@
-@extends('guest.master')
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Input</title>
+  <link rel="stylesheet" type="text/css" href="{{ url('css/styleland.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url('css/bootstrap.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url('css/all.min.css')}}">
+</head>
+<body>
 
-@section('konten')
+<div id="bg">
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="">
+            <img src="images/header.png" height="50px">
+          </a>
+        </div>
+      </nav>
 
-<div class="container-fluid mt-5">
-  <div class="row mt-1">
-  <div class="col-md-10 offset-md-1 mt-5">
-    <div class="col-md-12">
-      <div class="card rounded shadow">
-        <h4 class="card-header">Buku Tamu</h4>
-        <div class="card-body">
-            <form method="POST" action="{{route('isibukutamu')}}">
+      <!-- konten -->
+      <div class="container-fluid">
+        <div class="d-sm-flex justify-content-around content">
+          <div class="content-left">
+            <br><br><br><br>
+            <form class="form1" method="POST" action="{{route('isibukutamu')}}">
               @csrf
-              <div class="row mt-3">
-                <div class="col-md-6">
-                  <br><br>
-                  <h3 class="text-center">WELCOME</h3>
-                </div>
-                <div class="col-md-6">
-                  <!-- Nis -->
-                  <div class="form-group row">
-                    <label for="Nis" class="col-md-2 col-form-label col-form-label-md">Nis/Nip</label>
-                    <div class="col-md-9">
-                      <input type="text" name="nisnnip" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan nama" required>
-                    </div>
-                  </div>
-
-                  <!-- Nama -->
-                  <div class="form-group row">
-                    <label for="nama" class="col-md-2 col-form-label col-form-label-md">Nama</label>
-                    <div class="col-md-9">
-                      <input type="text" name="nama_tamu" class="form-control form-control-md @error('nama_tamu') is-invalid @enderror" id="colFormLabelSm" placeholder="Masukan nama" required>
-                    </div>
-                    @error('nama_tamu')
-                    <div class="invalid-feedback">
-                      {{ $message }}
-                    </div>
-                    @enderror
-                  </div>
-
-                  <!-- Kelas -->
-                  <div class="form-group row">
-                    <label for="kelas" class="col-md-2 col-form-label col-form-label-md">Kelas</label>
-                    <div class="col-md-9">
-                      <input type="text" name="kelas_tamu" class="form-control form-control-md" id="colFormLabelSm" placeholder="Masukan kelas" required>
-                      <button type="submit" class="btn btn-info mt-3 px-4 float-right">Submit</button>
-                    </div>
-                  </div>
-                </div>
+              <div class="form-group row">
+                <label class="col-md-6"><i class="fa fa-address-card"></i> Nisn/nip</label>
+                <input type="text" class="form-control" id="input" placeholder="Masukan nis">
               </div>
+              <div class="form-group row">
+                <label class="col-md-6"><i class="fa fa-user"></i> Nama</label>
+                <input type="text" class="form-control form-control-md @error('nama_tamu') is-invalid @enderror" id="input" placeholder="Masukan nama">
+              </div>
+              @error('nama_tamu')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+              @enderror
+              <div class="form-group row">
+                <label class="col-md-6"><i class="fa fa-users"></i> Kelas</label>
+                <input type="text" class="form-control" id="input" placeholder="Masukan Kelas">
+              </div>
+              <button type="submit" id="btn" class="btn btn-block btn-primary">Submit</button>
+            </form>
+          </div>
 
-          </form>
+          <div class="images1">
+            <img src="images/konten.png" height="400px">
+          </div>
         </div>
       </div>
-    </div>
+    </div>  
   </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 </div>
 
-@endsection
+<script type="text/javascript" src="{{ url('js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{ url('js/all.js')}}"></script>
+</body>
+</html>
