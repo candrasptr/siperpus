@@ -29,7 +29,7 @@ class TransaksiController extends Controller
         $buku = DB::table('tbl_buku')
                 ->select('tbl_buku.judul_buku','tbl_buku.id_buku')
                 ->get();
-        return view('admin.petugas.index',['buku'=>$buku],);
+        return view('admin.petugas.index',['buku'=>$buku]);
     }
 
     /**

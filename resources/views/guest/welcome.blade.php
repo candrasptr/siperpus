@@ -96,7 +96,7 @@
                        <a href="#"><img class="card-img-top" src="{{ url('images/'.$row->file_gambar_buku) }}" alt=""></a>
                        <div class="card-body">
                          <h4 class="card-title">
-                         <a href="">{{$row->judul_buku}}</a>
+                         <a href="{{route('guest.showbuku',['buku'=>$row->id_buku])}}">{{$row->judul_buku}}</a>
                          </h4>
                          <p class="card-text">{{$row->deskripsi}}</p> 
                        </div>

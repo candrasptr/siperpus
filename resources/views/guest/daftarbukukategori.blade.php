@@ -38,7 +38,7 @@
 			      <tr>
 			        <td>
 			          <img src="{{url('images/'.$row->file_gambar_buku)}}" width="100" class="img-thumbnail mr-3" align="left">
-			          <a href="/showbukuguest" class="font-weight-normal">
+			          <a href="{{route('guest.showbuku',['buku'=>$row->id_buku])}}" class="font-weight-normal">
 			              {{$row->judul_buku}}
 			          </a><br>
 					  <?php $nama_kategori = App\Kategori::select('nama_kategori')->where('id_kategori','=',$row->id_kategori)->pluck('nama_kategori')->first(); ?>
@@ -48,11 +48,8 @@
 			          <span>Ruangan    : <b>{{$kode_ruangan}}</b></span><br>
 			        </td>
 			        <td>
-			          <a href="/showbukuguest" class="btn btn-sm btn-info">
+			          <a href="{{route('guest.showbuku',['buku'=>$row->id_buku])}}" class="btn btn-sm btn-info">
 			            Selengkapnya
-			          </a>
-			          <a href="/pinjambuku" class="btn btn-sm btn-success ml-3">
-			            Pinjam
 			          </a>
 			        </td>
 			      </tr>

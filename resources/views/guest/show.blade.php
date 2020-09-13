@@ -115,7 +115,7 @@
                   <input type="text" name="jumlah" class="form-control form-control-md border bg-light" id="colFormLabelSm" disabled value="{{$row->jumlah_buku_diluar}}">
                 </div>
               </div>
-              <a href="{{route('buku.index')}}" class="btn btn-danger">Kembali</a> 
+              <a href="/" class="btn btn-danger">Kembali</a> 
         </div>
       </div>
     </div>
