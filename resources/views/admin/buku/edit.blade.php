@@ -8,7 +8,7 @@
       <h3>Edit Buku</h3>
     </div>
     <div class="col-md-12">
-      <form action="{{ route('buku.update',['Bukutamu'=>$row->id_buku]) }}" method="POST" enctype="multipart/form-data">
+      <form action="{{ route('buku.update',['buku'=>$row->id_buku]) }}" method="POST" enctype="multipart/form-data">
 
         @csrf
 			  @method('PUT')

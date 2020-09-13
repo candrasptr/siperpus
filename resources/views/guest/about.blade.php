@@ -17,13 +17,13 @@
     <div class="col-md-3 mt-4">
       <h5 id="sb">Developer</h5><hr>
       <p>
-        Kelompok 5 RPL A SMKN 1 PADAHERANG <br> 
+        CAOS RPL A SMKN 1 PADAHERANG <br> 
         <b>ANGGOTA :</b><br>
-        Azizah Esha r <br>
+        Azizah Esha R <br>
         Candra Saputra <br>
         Dati Urbaningrum <br>
         Kurniadi <br>
-        Rizqy Resha p <br>
+        Rizqy Resha P <br>
         Romi Hidayat
     </p>
     </div>

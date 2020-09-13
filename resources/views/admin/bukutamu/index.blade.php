@@ -5,7 +5,7 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Kategori</h1>
+  <h1 class="h3 mb-2 text-gray-800">Buku Tamu</h1>
 
   @if (session('store'))
           <div class="alert alert-success alert-dismissible fade show">
@@ -38,14 +38,14 @@
   <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Data kategori</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Data Tamu</h6>
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <div class="container-fluid">
             <div class="row">
             <div class="col-md-6">
-              <a href="{{route('bukutamu.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Buku Tamu</a>
+              <a href="{{route('bukutamu.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Tamu</a>
             </div>
 
             <div class="col-md-4 offset-md-2">

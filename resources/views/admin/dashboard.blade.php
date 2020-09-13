@@ -71,6 +71,8 @@
   <script type="text/javascript">
    let datakunjungperbulanchrt =  JSON.parse(`<?php echo $datakunjungperbulanchrt ?>`);
    let datapinjamperbulanchrt =  JSON.parse(`<?php echo $datapinjamperbulanchrt ?>`);
+   var datkunjungstr = datakunjungperbulanchrt.map(function(v) { return parseInt(v, 10); });
+   var datpinjamstr = datapinjamperbulanchrt.map(function(v) { return parseInt(v, 10); });
     Highcharts.chart('myChart', {
         chart: {
             type: 'area'
@@ -104,10 +106,10 @@
         },
         series: [{
             name: 'Jumlah Pengunjung',
-            data: datakunjungperbulanchrt
+            data: datkunjungstr
         },{
             name: 'Jumlah Transaksi',
-            data: datapinjamperbulanchrt
+            data: datpinjamstr
         }],
         responsive: {
             rules: [{
