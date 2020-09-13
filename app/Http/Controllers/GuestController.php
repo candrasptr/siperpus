@@ -14,7 +14,7 @@ class GuestController extends Controller
         $data = DB::table('tbl_buku')
                 ->where('tbl_buku.judul_buku','like',"%{$request->keyword}%")
                 ->orWhere('tbl_buku.penerbit','like',"%{$request->keyword}%")
-                ->paginate(8);
+                ->paginate(8)->onEachSide(0);
 
 
         return view('guest.welcome',['data'=>$data]);
@@ -28,7 +28,7 @@ class GuestController extends Controller
                 ->where('tbl_buku.judul_buku','like',"%{$request->keyword}%")
                 ->orWhere('tbl_buku.penerbit','like',"%{$request->keyword}%")
                 ->orderBy('tbl_ruangan.id_ruangan')
-                ->paginate(8);
+                ->paginate(8)->onEachSide(0);
 
         return view('guest.daftarbuku',['data'=>$data]);
     }

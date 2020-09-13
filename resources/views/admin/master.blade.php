@@ -120,6 +120,16 @@
           <span>Laporan</span></a>
       </li>
 
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item ">
+        <a class="nav-link" href="/bukutamuguest">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Form Buku Tamu</span></a>
+      </li>
+
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">

@@ -21,7 +21,7 @@
 			</li>
 		</div>
 		
-		<div class="col-md-2 offset-md-3">
+		<div class="col-md-3 offset-md-5">
 			<form action="?" method="GET">
 				<div class="input-group mb-3">
 					<input name="keyword" id="caribuku" type="text" class="form-control" placeholder="Cari..." aria-label="Cari" aria-describedby="button-addon2" value="{{ Request()->keyword }}">
@@ -32,7 +32,7 @@
 			</form>
 		</div>
 
-		<div class="col-md-7 offset-md-1">
+		<div class="col-md-10 offset-md-1">
 			<table class="table">
 			    <thead>
 			        <th>Buku</th>
@@ -63,38 +63,6 @@
 				 </tbody> 
 			</table>
 			{!! $data->links() !!}			
-		</div>
-		<div class="col-md-3 ml-2">
-			<div class="header">
-				<span id="bo">Buku Favorit<hr class="hrprofil"></span>
-			</div>
-			<div class="row mt-3">
-				<div class="col-sm-3">
-					<img style="width: 80px;" src="{{ url('images/mantappu.jpg') }}">
-				</div>
-				<div class="col-sd-3 ml-3">
-					<p id="me" style="font-size: 13px;" class="text-right">Matematika VII</p>
-					<p class="text-secondary" style="font-size: 13px;">Teratas no 1</p>
-				</div>
-			</div>
-			<div class="row mt-3">
-				<div class="col-sm-3">
-					<img style="width: 80px;" src="{{ url('images/mantappu.jpg') }}">
-				</div>
-				<div class="col-sd-3 ml-3">
-					<p id="me" style="font-size: 13px;" class="text-right">Matematika VII</p>
-					<p class="text-secondary" style="font-size: 13px;">Teratas no 2</p>
-				</div>
-			</div>
-			<div class="row mt-3">
-				<div class="col-sm-3">
-					<img style="width: 80px;" src="{{ url('images/mantappu.jpg') }}">
-				</div>
-				<div class="col-sd-3 ml-3">
-					<p id="me" style="font-size: 13px;" class="text-right">Matematika VII</p>
-					<p class="text-secondary" style="font-size: 13px;">Teratas no 3</p>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

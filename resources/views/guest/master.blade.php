@@ -81,7 +81,7 @@
                 <div class="container-fluid" id="footerdua">
                   <div class="row">
                     <div class="col-md-8 offset-md-1">
-                      <i class="fa fa-copyright" id="iconcopy"></i><span id="copy"> Copyright 2020 | Powered by CAOS RPL SMKN 1 Padaherang</span>
+                      <i class="fa fa-copyright" id="iconcopy"></i><span id="copy"> Copyright 2020 | Powered by CAOS RPL A SMKN 1 Padaherang</span>
                     </div>
                     <div class="col-md-2">
                       <a href="/" id="copy">Home</a> | <a href="/about" id="copy">about</a>

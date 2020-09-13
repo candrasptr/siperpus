@@ -32,11 +32,11 @@
               @csrf
               <div class="form-group row">
                 <label class="col-md-6"><i class="fa fa-address-card"></i> Nisn/nip</label>
-                <input type="text" class="form-control" id="input" placeholder="Masukan nis">
+                <input name="nisnnip" type="text" class="form-control" id="input" placeholder="Masukan nis">
               </div>
               <div class="form-group row">
                 <label class="col-md-6"><i class="fa fa-user"></i> Nama</label>
-                <input type="text" class="form-control form-control-md @error('nama_tamu') is-invalid @enderror" id="input" placeholder="Masukan nama">
+                <input name="nama_tamu" type="text" class="form-control form-control-md @error('nama_tamu') is-invalid @enderror" id="input" placeholder="Masukan nama">
               </div>
               @error('nama_tamu')
               <div class="invalid-feedback">
@@ -45,7 +45,7 @@
               @enderror
               <div class="form-group row">
                 <label class="col-md-6"><i class="fa fa-users"></i> Kelas</label>
-                <input type="text" class="form-control" id="input" placeholder="Masukan Kelas">
+                <input name="kelas_tamu" type="text" class="form-control" id="input" placeholder="Masukan Kelas">
               </div>
               <button type="submit" id="btn" class="btn btn-block btn-primary">Submit</button>
             </form>
