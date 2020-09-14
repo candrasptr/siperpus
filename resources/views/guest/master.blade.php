@@ -73,7 +73,7 @@
                       </div>
                       <div class="col-md-2 mt-5">
                         <span class="text-light" id="sb">Link <hr class="footer"></span>
-                        <a href="" id="footertext" class="text-light">Kemendikbud</a><br>
+                        <a href="{{url('http://ditpsmp.kemdikbud.go.id/')}}" id="footertext" class="text-light">Kemendikbud</a><br>
                         <a href="" id="footertext" class="text-light">SMP Negeri 1 Kalipucang</a>
                       </div>
                   </div>

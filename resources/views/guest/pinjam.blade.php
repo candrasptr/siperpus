@@ -24,6 +24,7 @@
       </nav>
 
       <!-- konten -->
+      
       <div class="container-fluid">
         <div class="d-sm-flex justify-content-around content">
           <div class="content-left">
@@ -61,7 +62,16 @@
 
 </div>
 
+<script>
+  var msg = '{{Session::get('alert')}}';
+  var exist = '{{Session::has('alert')}}';
+  if(exist){
+    alert(msg);
+  }
+</script>
+
 <script type="text/javascript" src="{{ url('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{ url('js/all.js')}}"></script>
 </body>
 </html>
+

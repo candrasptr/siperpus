@@ -74,7 +74,6 @@
           <label>Kategori</label>
           <?php $value=old('kategori',$row->id_kategori);?>
 					<select name="kategori" class="form-control @error('kategori') is-invalid @enderror">
-						<option>Pilih : </option>
 							@foreach(App\Kategori::orderBy('nama_kategori','asc')->get() as $kategori)
 								<option value="{{$kategori->id_kategori}}" {{ $value == $kategori->id_kategori ? 'selected' : ''}}>
 										{{$kategori->nama_kategori}}
@@ -122,7 +121,6 @@
           <label>Ruangan</label>
 					<?php $value=old('ruangan',$row->id_ruangan);?>
 					<select name="ruangan" class="form-control @error('ruangan') is-invalid @enderror">
-						<option>Pilih : </option>
 							@foreach(App\Ruangan::orderBy('kode_ruangan','asc')->get() as $ruangan)
 								<option value="{{$ruangan->id_ruangan}}" {{ $value == $ruangan->id_ruangan ? 'selected' : ''}}>
 										{{$ruangan->kode_ruangan}}

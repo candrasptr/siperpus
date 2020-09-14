@@ -14,13 +14,8 @@
 
         <div class="form-group">
           <div class="custom-file">
-            <input type="file" class="form-control @error('gambar') is-invalid @enderror" id="inputGambar" placeholder=" masukan file gambar buku" name="gambar">
+            <input type="file" class="form-control" id="inputGambar" placeholder=" masukan file gambar buku" name="gambar">
             <label class="custom-file-label" for="inputGambar">Pilih Gambar</label>
-            @error('gambar')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-            @enderror
           </div>
         </div>
 
@@ -73,7 +68,6 @@
           <label>Kategori</label>
 					<?php $value=old('kategori'); ?>
 					<select name="kategori" class="form-control @error('kategori') is-invalid @enderror">
-						<option>Pilih : </option>
 							@foreach(App\Kategori::orderBy('nama_kategori','asc')->get() as $kategori)
 								<option value="{{$kategori->id_kategori}}" {{ $value == $kategori->id_kategori ? 'selected' : ''}}>
 										{{$kategori->nama_kategori}}
@@ -121,7 +115,6 @@
           <label>Ruangan</label>
 					<?php $value=old('ruangan'); ?>
 					<select name="ruangan" class="form-control @error('ruangan') is-invalid @enderror">
-						<option>Pilih : </option>
 							@foreach(App\Ruangan::orderBy('kode_ruangan','asc')->get() as $ruangan)
 								<option value="{{$ruangan->id_ruangan}}" {{ $value == $ruangan->id_ruangan ? 'selected' : ''}}>
 										{{$ruangan->kode_ruangan}}

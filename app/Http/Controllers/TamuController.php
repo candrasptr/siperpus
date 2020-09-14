@@ -40,7 +40,7 @@ class TamuController extends Controller
             'tanggal_kunjungan'=>$hariini
         ]);
 
-        return view('guest.pinjam');
+        return redirect()->back()->with('alert', 'Data anda berhasil di simpan silahkan masuk ruangan');
     }
 
     /**

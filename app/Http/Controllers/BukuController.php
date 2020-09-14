@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Buku;
+use Image;
 
 class BukuController extends Controller
 {
@@ -46,7 +47,6 @@ class BukuController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'gambar'=>'required|image',
             'judul_buku'=>'required|between:3,150',
             'pengarang'=>'required',
             'penerbit'=>'required',
@@ -58,14 +58,43 @@ class BukuController extends Controller
             'status'=>'required',
         ]);
 
-        $file = $request->file('gambar');
-        $ext = $file->getClientOriginalExtension();
-        $new_filename = date('YmdHis').'_'.rand().'.'.$ext;
-        $file->move('images',$new_filename);
-            
+        // $file = $request->file('gambar');
+        // $ext = $file->getClientOriginalExtension();
+        // $new_filename = date('YmdHis').'_'.rand().'.'.$ext;
+        // $file->move('images',$new_filename);
+        if(!empty($request->gambar))
+        {
+         //lokasi file gambar di simpan
+         $lokasi_file = public_path('/images');
+
+         //Resize gambar
+         $gambar = $request->file('gambar');
+         $nama_gambar = 'gambar_'. time() . '.' . $gambar->getClientOriginalExtension();
+         $resize_gambar = Image::make($gambar->getRealPath());
+         $resize_gambar->resize(253, 253)->save($lokasi_file . '/' . $nama_gambar);
+         //End resize gambar
+             
+         Buku::create([
+             'judul_buku'=>$request->judul_buku,
+             'file_gambar_buku'=>$nama_gambar,
+             'pengarang'=>$request->pengarang,
+             'penerbit'=>$request->penerbit,
+             'sinopsis'=>$request->sinopsis,
+             'deskripsi'=>$request->deskripsi,
+             'id_kategori'=>$request->kategori,
+             'jumlah_buku_total'=>$request->jumlah_buku_total,
+             'jumlah_buku'=>$request->jumlah_buku,
+             'jumlah_buku_diluar'=>$request->jumlah_buku_diluar,
+             'id_ruangan'=>$request->ruangan,
+             'status'=>$request->status,
+         ]);
+ 
+         return redirect()->route('buku.index')->with('store','Berhasil disimpan!');            
+        }    
+    
         Buku::create([
             'judul_buku'=>$request->judul_buku,
-            'file_gambar_buku'=>$new_filename,
+            'file_gambar_buku'=>"noimage.png",
             'pengarang'=>$request->pengarang,
             'penerbit'=>$request->penerbit,
             'sinopsis'=>$request->sinopsis,
@@ -127,14 +156,19 @@ class BukuController extends Controller
 
         if(!empty($request->gambar)){
 
-            $file = $request->file('gambar');
-            $ext = $file->getClientOriginalExtension();
-            $new_filename = date('YmdHis').'_'.rand().'.'.$ext;
-            $file->move('images',$new_filename);
+            //lokasi file gambar di simpan
+            $lokasi_file = public_path('/images');
+
+            //Resize gambar
+            $gambar = $request->file('gambar');
+            $nama_gambar = 'gambar_'. time() . '.' . $gambar->getClientOriginalExtension();
+            $resize_gambar = Image::make($gambar->getRealPath());
+            $resize_gambar->resize(253, 253)->save($lokasi_file . '/' . $nama_gambar);
+            //End resize gambar
 
             $query = [
                 'judul_buku'=>$request->judul_buku,
-                'file_gambar_buku'=>$new_filename,
+                'file_gambar_buku'=>$nama_gambar,
                 'pengarang'=>$request->pengarang,
                 'penerbit'=>$request->penerbit,
                 'sinopsis'=>$request->sinopsis,
