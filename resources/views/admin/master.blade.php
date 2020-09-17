@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="icon" type="image/png" href="{{ url('images/favicon.png') }}">
 
   <title>Dashboard</title>
 
@@ -126,7 +127,7 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item ">
         <a class="nav-link" href="/bukutamuguest">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-clipboard-list"></i>
           <span>Form Buku Tamu</span></a>
       </li>
 

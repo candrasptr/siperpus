@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Sep 2020 pada 06.41
+-- Waktu pembuatan: 15 Sep 2020 pada 10.18
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.8
 
@@ -43,7 +43,7 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id_admin`, `nama_admin`, `email_verified_at`, `created_at`, `updated_at`, `remember_token`, `email`, `password`) VALUES
-(3, 'Mellie Mills', '2020-08-18 20:18:44', '2020-08-18 20:18:44', '2020-08-18 20:18:44', 'Vo73p0Eyr0', 'ondricka.keven@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+(27, 'Admincore', '2020-09-15 08:10:29', '2020-09-15 01:10:29', '2020-09-15 01:10:29', NULL, 'admin@perpus.com', '$2y$10$/obdCiWyrIr19dCd9xVmLOaluwpAOwUtO0kSNngj2Urj1F7Yj/e1C');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE `tbl_buku` (
 
 INSERT INTO `tbl_buku` (`id_buku`, `judul_buku`, `file_gambar_buku`, `pengarang`, `penerbit`, `sinopsis`, `deskripsi`, `id_kategori`, `jumlah_buku_total`, `jumlah_buku`, `jumlah_buku_diluar`, `id_ruangan`, `status`) VALUES
 (1, 'Aut voluptas.', 'noimage.png', 'Dr. Kacey Boyle III', 'aut', 'Ut ut soluta sapiente quos nihil quo. Placeat est impedit dicta temporibus nam. Provident numquam voluptatum id et repellat voluptate.', 'Est eos doloribus hic molestiae. Dolorum autem excepturi qui est. Laborum ut quibusdam dolorum eos modi odio et.', 3, 13, 13, 0, 6, 'Tersedia'),
-(2, 'Est consequuntur delectus ut culpa.', 'noimage.png', 'Dr. Narciso Yost Jr.', 'ullam', 'Omnis omnis aspernatur voluptate maiores. Voluptatem est id adipisci quasi sint eos itaque suscipit. Rerum id velit non rem.', 'Iste nostrum soluta sunt eos hic sint aut. Deserunt ullam expedita distinctio ea quam ad et dolorum. Facere qui rerum quasi.', 2, 48, 38, 10, 7, 'Tersedia'),
+(2, 'Est consequuntur delectus ut culpa.', 'noimage.png', 'Dr. Narciso Yost Jr.', 'ullam', 'Omnis omnis aspernatur voluptate maiores. Voluptatem est id adipisci quasi sint eos itaque suscipit. Rerum id velit non rem.', 'Iste nostrum soluta sunt eos hic sint aut. Deserunt ullam expedita distinctio ea quam ad et dolorum. Facere qui rerum quasi.', 2, 48, 48, 0, 7, 'Tersedia'),
 (3, 'Voluptatem illo ut.', 'noimage.png', 'Samson Gutmann', 'eum', 'Rerum est reiciendis voluptas sit. Aperiam in accusamus quo ea expedita commodi. Sapiente quia voluptas quasi alias.', 'Aut ut eos quos quia. Dolores quis voluptatum inventore. Qui excepturi sed iure vel. Qui molestiae omnis itaque non velit ut ut. Quis ea omnis accusamus.', 2, 48, 48, 0, 5, 'Tersedia'),
 (4, 'Veniam voluptatibus ad.', 'noimage.png', 'Hermann Abshire', 'provident', 'Unde consectetur minima esse possimus est sed voluptatibus hic. Molestiae rerum id dolores quia ullam. Voluptas eos dicta et neque quia dolorum. Veniam esse earum excepturi consequatur tempora.', 'Veniam eos recusandae velit quo sint quae commodi. Commodi quas harum neque voluptatem consequatur delectus non. Saepe delectus dicta dolorem.', 1, 9, 9, 0, 8, 'Tersedia'),
 (5, 'Dolorum odit eos iste.', 'noimage.png', 'Mr. Juwan Hermann', 'sit', 'Blanditiis ipsum voluptas illum quaerat. Suscipit consequatur aut dolore debitis qui eaque velit. Dolorem necessitatibus hic dolorem mollitia harum et.', 'Voluptatem ut doloribus consequuntur tempore. Voluptates rem illum nam labore veniam. Eaque temporibus adipisci ea unde doloribus iste qui.', 4, 23, 23, 0, 9, 'Tersedia'),
@@ -1081,7 +1081,12 @@ INSERT INTO `tbl_buku` (`id_buku`, `judul_buku`, `file_gambar_buku`, `pengarang`
 (999, 'Similique maxime quia sapiente.', 'noimage.png', 'Dr. Pink Yundt', 'ut', 'Odio assumenda repudiandae tempora alias fuga. Est qui sint asperiores assumenda. Labore repellat sequi qui quia sint excepturi.', 'Alias corrupti temporibus porro eum. Ipsa aut sed qui distinctio. Et porro est dolore iusto exercitationem sit provident. Laboriosam in nam dolorem non minima omnis.', 4, 43, 43, 0, 8, 'Tersedia'),
 (1000, 'Sit error accusantium excepturi.', 'noimage.png', 'Tyrique Klein', 'sunt', 'Sed qui perferendis laboriosam qui aut. Facere esse aut sed cum maiores. Quis ut suscipit consequatur nemo esse dolor odio. Dolorem voluptatibus laborum deleniti et architecto qui.', 'Rerum quos totam ut et. Quisquam sunt sit aliquam deserunt eligendi dolorum a. Ad dolores dolorem similique et consequuntur placeat reprehenderit.', 4, 40, 40, 0, 8, 'Tersedia'),
 (1001, 'All About Noobs', '20200829015525_689186228.png', 'Dr. Rizqy Resha', 'PT.SukaSukaGue', 'Sukses Karena noob menjadi impian semua noobies', 'buku dokumenter penting', 1, 50, 50, 0, 1, 'Tersedia'),
-(1002, 'Sayur Sayuran', '20200829031042_624423079.png', 'test', 'test', 'test', 'test', 4, 1, 1, 0, 1, 'Tersedia');
+(1002, 'Sayur Sayuran', '20200829031042_624423079.png', 'test', 'test', 'test', 'test', 4, 1, 1, 0, 1, 'Tersedia'),
+(1005, 'Noobies In The Pranks', 'gambar_1600008508.png', 'Drs.Rizqy Resha', 'cwqd', 'ondricka.keven@example.orgondricka.keven@example.orgondricka.keven@example.orgondricka.keven@example.org', 'ondricka.keven@example.orgondricka.keven@example.orgondricka.keven@example.orgondricka.keven@example.org', 3, 10, 10, 0, 1, 'Tersedia'),
+(1006, 'Noobies In The Pranks', 'gambar_1600008520.png', 'Drs.Rizqy Resha', 'cwqd', 'ondricka.keven@example.orgondricka.keven@example.orgondricka.keven@example.orgondricka.keven@example.org', 'ondricka.keven@example.orgondricka.keven@example.orgondricka.keven@example.orgondricka.keven@example.org', 3, 10, 10, 0, 1, 'Tersedia'),
+(1007, 'Noobies In The Pranks', 'gambar_1600008588.png', 'test', 'test', 'asdasd', 'asdasd', 4, 12, 12, 0, 1, 'Tersedia'),
+(1009, 'test', 'gambar_1600008832.jpg', 'testss', 'ssds', 'asdas', 'dasdasd', 4, 12, 12, 0, 1, 'Tersedia'),
+(1010, 'Noobies In The Pranks', 'noimage.png', 'Drs.Rizqy Resha', 'PT.SukaSukaGue', 'asdas', 'dasd', 4, 2, 2, 0, 1, 'Tersedia');
 
 -- --------------------------------------------------------
 
@@ -3162,7 +3167,31 @@ INSERT INTO `tbl_tamu` (`id_tamu`, `nisnnip`, `nama_tamu`, `kelas_tamu`, `tangga
 (2000, '64009615', 'Miss Iliana Corwin DVM', 'XII RPL C', '2020-08-10'),
 (2001, '09829281', 'Rizqy', 'XI RPL A', '2020-08-29'),
 (2002, '09829281', 'Rizqy Testa', 'XI RPL A', '2020-08-17'),
-(2003, '09829281', 'Rizqy', 'XI RPL A', '2020-09-06');
+(2003, '09829281', 'Rizqy', 'XI RPL A', '2020-09-06'),
+(2004, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2005, '1263414613', 'Rizqy Testa', 'XI RPL A', '2020-09-13'),
+(2006, '1263414613', 'Rizqy Testa', 'XI RPL A', '2020-09-13'),
+(2007, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2008, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2009, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2010, 'asd', 'asd', 'asdasd', '2020-09-13'),
+(2011, 'asd', 'asd', 'asdasd', '2020-09-13'),
+(2012, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2013, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2014, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2015, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2016, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2017, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2018, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2019, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2020, 'asd', 'asd', 'asd', '2020-09-13'),
+(2021, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2022, '09829281', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2023, 'sd', 'asd', 'asd', '2020-09-13'),
+(2024, '1263414613', 'Rizqy', 'XI RPL A', '2020-09-13'),
+(2025, '09829281', 'Rizqy Testa', 'asdasd', '2020-09-14'),
+(2026, 'asd', 'Rizqy a', 'XI RPL A', '2020-09-14'),
+(2027, '09829281', 'Rizqy', 'XI RPL A', '2020-09-15');
 
 -- --------------------------------------------------------
 
@@ -4193,9 +4222,11 @@ INSERT INTO `tbl_transaksi` (`id_transaksi`, `nisnnip`, `nama_peminjam`, `kelas_
 (998, '40936088', 'Dr. Zechariah Marks Sr.', 'XII RPL C', '151 Predovic Turnpike\nLake Domenicshire, CO 38621-1451', '+7597685143259', 1, 'Quos omnis quis expedita.', 32, '2020-03-08', '2020-08-28', 'SELESAI'),
 (999, '805339', 'Alfonso Thiel PhD', 'XII RPL A', '5519 Little Camp Suite 384\nBodeside, MN 76750-0369', '+9767791959015', 1, 'Quos omnis quis expedita.', 28, '2020-03-05', '2020-08-28', 'SELESAI'),
 (1000, '60344072', 'Prof. Leonel Franecki', 'XII RPL C', '5851 Brakus Island\nGiovannystad, MN 48287', '+4243126728238', 1, 'Quos omnis quis expedita.', 8, '2020-05-29', '2020-08-28', 'SELESAI'),
-(1001, '1263414613', 'Rizqy111111111112', 'XII RPL A', 'JL.Raya Pangandaran, JL.Raya Pangandaran', '081928721623', 2, 'Est consequuntur delectus ut culpa.', 10, '2020-08-29', '2020-08-29', 'DIPINJAM'),
+(1001, '1263414613', 'Rizqy111111111112', 'XII RPL A', 'JL.Raya Pangandaran, JL.Raya Pangandaran', '081928721623', 2, 'Est consequuntur delectus ut culpa.', 10, '2020-08-29', '2020-08-29', 'SELESAI'),
 (1002, '09829281', 'Rizqy', 'XI RPL A', 'JL.Raya Pangandaran, JL.Raya Pangandaran', '081928721623', 5, 'Dolorum odit eos iste.', 2, '2020-08-29', '2020-08-29', 'SELESAI'),
-(1003, '1263414613', 'Rizqy', 'XII RPL A', 'JL.Raya Pangandaran, JL.Raya Pangandaran', '081928721623', 4, 'Veniam voluptatibus ad.', 5, '2020-08-27', '2020-08-30', 'SELESAI');
+(1003, '1263414613', 'Rizqy', 'XII RPL A', 'JL.Raya Pangandaran, JL.Raya Pangandaran', '081928721623', 4, 'Veniam voluptatibus ad.', 5, '2020-08-27', '2020-08-30', 'SELESAI'),
+(1004, '09829281', 'Rizqy', 'XI RPL A', 'JL.Raya Pangandaran, JL.Raya Pangandaran', '081928721623', 2, 'Est consequuntur delectus ut culpa.', 1, '2020-09-13', '2020-09-16', 'SELESAI'),
+(1005, '09829281', 'Rizqy111111111112', 'XI RPL A', 'JL.Raya Pangandaran, JL.Raya Pangandaran', '081928721623', 5, 'Dolorum odit eos iste.', 10, '2020-09-15', '2020-09-18', 'SELESAI');
 
 --
 -- Indexes for dumped tables
@@ -4246,13 +4277,13 @@ ALTER TABLE `tbl_transaksi`
 -- AUTO_INCREMENT untuk tabel `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_buku`
 --
 ALTER TABLE `tbl_buku`
-  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1003;
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1011;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_kategori`
@@ -4270,13 +4301,13 @@ ALTER TABLE `tbl_ruangan`
 -- AUTO_INCREMENT untuk tabel `tbl_tamu`
 --
 ALTER TABLE `tbl_tamu`
-  MODIFY `id_tamu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2004;
+  MODIFY `id_tamu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2028;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_transaksi`
 --
 ALTER TABLE `tbl_transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1006;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
